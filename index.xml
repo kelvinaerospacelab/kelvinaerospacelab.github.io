@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kelvin Aerospace Lab</title>
+    <link>//localhost:10832/</link>
+    <description>Recent content on Kelvin Aerospace Lab</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:10832/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to Kelvin Aerospace Lab (KAL)</title>
+      <link>//localhost:10832/intro/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:10832/intro/</guid>
+      <description>&lt;p&gt;Kelvin Aerospace Lab (KAL) is a student-led club at Kelvin High School dedicated to exploring the world of aerospace technology.&lt;/p&gt;&#xA;&lt;p&gt;Here, you’ll get hands-on experience in designing, building, and testing aerospace systems, while learning advanced physics, engineering, and electronics in a collaborative environment.&lt;/p&gt;&#xA;&lt;p&gt;Our mission is to spark curiosity about space exploration and engineering, and give students the opportunity to develop real technical skills through exciting projects and research.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-do&#34;&gt;What We Do&lt;/h2&gt;&#xA;&lt;h4 id=&#34;1-club-projects&#34;&gt;1. Club Projects&lt;/h4&gt;&#xA;&lt;p&gt;Our main focus is liquid rocket design, covering everything from engine design to electronic control systems.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
