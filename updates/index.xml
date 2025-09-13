@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kelvin Aerospace Lab</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Kelvin Aerospace Lab</description>
+    <title>Updates on Kelvin Aerospace Lab</title>
+    <link>http://localhost:1313/updates/</link>
+    <description>Recent content in Updates on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 12 Sep 2025 13:35:55 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/updates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to Our New Updates Section</title>
       <link>http://localhost:1313/updates/first-update/</link>
       <pubDate>Fri, 12 Sep 2025 13:35:55 -0500</pubDate>
       <guid>http://localhost:1313/updates/first-update/</guid>
       <description>&lt;p&gt;We&amp;rsquo;re excited to introduce our new Updates section! This is where we&amp;rsquo;ll be sharing the latest news, announcements, and developments from our team.&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s New&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Basic website updates&lt;/li&gt;&#xA;&lt;li&gt;Fixed navigation bar display issues&lt;/li&gt;&#xA;&lt;li&gt;Fixed icon errors&lt;/li&gt;&#xA;&lt;li&gt;Added a dedicated Updates section for general news&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;coming-soon&#34;&gt;Coming Soon&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;First meeting: 15th September&lt;/li&gt;&#xA;&lt;li&gt;Upcoming Documentation Features&lt;/li&gt;&#xA;&lt;li&gt;More detailed roadmap&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned for more updates!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Welcome to Kelvin Aerospace Lab (KAL)</title>
-      <link>http://localhost:1313/intro/</link>
-      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/intro/</guid>
-      <description>&lt;p&gt;Kelvin Aerospace Lab (KAL) is a student-led club at Kelvin High School dedicated to exploring the world of aerospace technology.&lt;/p&gt;&#xA;&lt;p&gt;Here, you’ll get hands-on experience in designing, building, and testing aerospace systems, while learning advanced physics, engineering, and electronics in a collaborative environment.&lt;/p&gt;&#xA;&lt;p&gt;Our mission is to spark curiosity about space exploration and engineering, and give students the opportunity to develop real technical skills through exciting projects and research.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-do&#34;&gt;What We Do&lt;/h2&gt;&#xA;&lt;h4 id=&#34;1-club-projects&#34;&gt;1. Club Projects&lt;/h4&gt;&#xA;&lt;p&gt;Our main focus is liquid rocket design, covering everything from engine design to electronic control systems.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
