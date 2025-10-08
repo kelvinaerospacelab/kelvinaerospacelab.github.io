@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/updates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to Our New Updates Section</title>
-      <link>http://localhost:1313/updates/first-update/</link>
+      <link>http://localhost:1313/updates/101-welcome/</link>
       <pubDate>Fri, 12 Sep 2025 13:35:55 -0500</pubDate>
-      <guid>http://localhost:1313/updates/first-update/</guid>
+      <guid>http://localhost:1313/updates/101-welcome/</guid>
       <description>&lt;p&gt;We&amp;rsquo;re excited to introduce our new Updates section! This is where we&amp;rsquo;ll be sharing the latest news, announcements, and developments from our team.&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s New&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Basic website updates&lt;/li&gt;&#xA;&lt;li&gt;Fixed navigation bar display issues&lt;/li&gt;&#xA;&lt;li&gt;Fixed icon errors&lt;/li&gt;&#xA;&lt;li&gt;Added a dedicated Updates section for general news&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;coming-soon&#34;&gt;Coming Soon&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;First meeting: 15th September&lt;/li&gt;&#xA;&lt;li&gt;Upcoming Documentation Features&lt;/li&gt;&#xA;&lt;li&gt;More detailed roadmap&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned for more updates!&lt;/p&gt;</description>
     </item>
   </channel>

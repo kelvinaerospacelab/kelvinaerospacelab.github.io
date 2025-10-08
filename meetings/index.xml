@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kelvin Aerospace Lab</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Kelvin Aerospace Lab</description>
+    <title>Meetings on Kelvin Aerospace Lab</title>
+    <link>http://localhost:1313/meetings/</link>
+    <description>Recent content in Meetings on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 07 Oct 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/meetings/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Meeting #04</title>
       <link>http://localhost:1313/meetings/04/</link>
@@ -35,20 +35,6 @@
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/meetings/01/</guid>
       <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The first meeting of the Kelvin Aerospace Laboratory focused on introducing the club’s vision, establishing direction, and discussing initial goals. Key points included:&lt;/p&gt;&#xA;&lt;p&gt;Mission: To provide students with hands-on opportunities to explore aerospace technology, engineering, physics, and electronics through collaborative projects and research.&lt;/p&gt;&#xA;&lt;p&gt;Core Objectives: The club provides participants with hands-on engineering experience through project-based learning in aerospace-related technologies. Furthermore, through projects and science outreach, it aims to inspire more students to pursue engineering-related fields.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Welcome to Our New Updates Section</title>
-      <link>http://localhost:1313/updates/101-welcome/</link>
-      <pubDate>Fri, 12 Sep 2025 13:35:55 -0500</pubDate>
-      <guid>http://localhost:1313/updates/101-welcome/</guid>
-      <description>&lt;p&gt;We&amp;rsquo;re excited to introduce our new Updates section! This is where we&amp;rsquo;ll be sharing the latest news, announcements, and developments from our team.&lt;/p&gt;&#xA;&lt;h2 id=&#34;whats-new&#34;&gt;What&amp;rsquo;s New&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Basic website updates&lt;/li&gt;&#xA;&lt;li&gt;Fixed navigation bar display issues&lt;/li&gt;&#xA;&lt;li&gt;Fixed icon errors&lt;/li&gt;&#xA;&lt;li&gt;Added a dedicated Updates section for general news&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;coming-soon&#34;&gt;Coming Soon&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;First meeting: 15th September&lt;/li&gt;&#xA;&lt;li&gt;Upcoming Documentation Features&lt;/li&gt;&#xA;&lt;li&gt;More detailed roadmap&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Stay tuned for more updates!&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Welcome to Kelvin Aerospace Lab (KAL)</title>
-      <link>http://localhost:1313/intro/</link>
-      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/intro/</guid>
-      <description>&lt;p&gt;Kelvin Aerospace Lab (KAL) is a student-led club at Kelvin High School dedicated to exploring the world of aerospace technology.&lt;/p&gt;&#xA;&lt;p&gt;Here, you’ll get hands-on experience in designing, building, and testing aerospace systems, while learning advanced physics, engineering, and electronics in a collaborative environment.&lt;/p&gt;&#xA;&lt;p&gt;Our mission is to spark curiosity about space exploration and engineering, and give students the opportunity to develop real technical skills through exciting projects and research.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-do&#34;&gt;What We Do&lt;/h2&gt;&#xA;&lt;h4 id=&#34;1-club-projects&#34;&gt;1. Club Projects&lt;/h4&gt;&#xA;&lt;p&gt;Our main focus is liquid rocket design, covering everything from engine design to electronic control systems.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

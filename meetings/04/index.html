@@ -2,7 +2,7 @@
 <html lang="en">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><head>
   <meta charset="utf-8" />
-  <title>Updates</title>
+  <title>Meeting #04</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -175,10 +175,8 @@
     </div>
   </nav>
 </section>
-
-<section class="header" id="updates-hero">
+<section class="header" id="meetings-hero">
   <div class="hero-image">
-    
     <img
       class="d-none d-md-block"
       src="/images/background.jpg"
@@ -189,29 +187,18 @@
       src="/images/gus_small.jpg"
       alt="background"
     />
-    
   </div>
   <div class="container">
     <div class="row content">
       <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 head-container">
         <div class="head-holder">
-          <h1 class="introduction"><span class='title-kelvin'>UPDATES</span> & NEWS</h1>
+          <h1 class="introduction"><span class='title-kelvin'>MEETINGS</span> & NOTES</h1>
           <div class="animated-text">
             <strong class="cd-headline clip">
               <span class="cd-words-wrapper">
-                
-                  
-                  <b class="is-visible">Latest news and announcements</b>
-                  
-                
-                  
-                  <b>Stay updated with our progress</b>
-                  
-                
-                  
-                  <b>Follow our journey</b>
-                  
-                
+                <b class="is-visible">Meeting minutes and discussions</b>
+                <b>Team collaboration updates</b>
+                <b>Project progress tracking</b>
               </span>
             </strong>
           </div>
@@ -220,54 +207,118 @@
     </div>
   </div>
 </section>
-
-<div class="container mt-5">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h1 class="section-title">News & Updates</h1>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <div class="text-center mb-5">
-          <p>Stay up to date with our latest news and announcements.</p>
-
-        </div>
-        
-        <div class="updates-list">
-          
-          <div class="card mb-4">
-            <div class="card-body">
-              <h2 class="card-title">
-                <a href="/updates/101-welcome/" class="text-dark">Welcome to Our New Updates Section</a>
-              </h2>
-              <p class="text-muted">September 12, 2025</p>
-              <div class="card-text">
-                <p>We&rsquo;re excited to introduce our new Updates section! This is where we&rsquo;ll be sharing the latest news, announcements, and developments from our team.</p>
-<h2 id="whats-new">What&rsquo;s New</h2>
-<ul>
-<li>Basic website updates</li>
-<li>Fixed navigation bar display issues</li>
-<li>Fixed icon errors</li>
-<li>Added a dedicated Updates section for general news</li>
-</ul>
-<h2 id="coming-soon">Coming Soon</h2>
-<ul>
-<li>First meeting: 15th September</li>
-<li>Upcoming Documentation Features</li>
-<li>More detailed roadmap</li>
-</ul>
-<p>Stay tuned for more updates!</p>
-              </div>
-              
+<section class="about-me" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <article class="meeting-single">
+            <div class="text-center mb-5">
+              <h1 class="section-title">251007 - Meeting #04</h1>
+              <p class="text-muted">October 7, 2025</p>
             </div>
-          </div>
-          
+            
+            <div class="meeting-content">
+              <h2 id="general-discussion">General Discussion</h2>
+<p>The fourth meeting marked a major technological milestone, demonstrating the first regenerative cooling model and extensive discussions on the test bench electronics system, collaborative development tools, and workflow optimization for both documentation and meetings.</p>
+<h2 id="technical--project-discussions">Technical &amp; Project Discussions</h2>
+<h4 id="regenerative-cooling-prototype">Regenerative Cooling Prototype</h4>
+<ul>
+<li>
+<p>The first regenerative cooling channel model was presented, which is the club&rsquo;s first functional liquid rocket engine physical design. Discussions agreed that this component still needs to be optimized and improved, and requires more accurate calculations and designs, and all processes should be recorded.</p>
+</li>
+<li>
+<p>Members agreed to optimize the channel geometry and flow path before simulation and 3D printing.</p>
+</li>
+<li>
+<p>The next step will involve 3D printing a PLA prototype, which will be used for fluidity testing in water to evaluate and refine the data before applying it to the metal version.</p>
+</li>
+</ul>
+<h4 id="test-bench--electronics-system">Test Bench &amp; Electronics System</h4>
+<ul>
+<li>
+<p>A new section was introduced focusing on test stand electronics and data acquisition. The MECO Rocket Simulator was demonstrated as a reference example to illustrate required data collection, transmission, visualization, and recording functions.</p>
+</li>
+<li>
+<p>The electronics subgroup will research sensors, data interfaces, and control systems for real-time measurements. Data requirements included:</p>
+<ul>
+<li><strong>Pressure</strong> (chamber, propellant lines)</li>
+<li><strong>Thrust</strong></li>
+<li><strong>Propellant mass flow rate</strong></li>
+<li><strong>Temperature</strong>((propellant, engine exterior, regenerative cooling lines))</li>
+<li><strong>Vibration and safety triggers</strong></li>
+</ul>
+</li>
+</ul>
+<p>During early testing, data was collected using an Arduino UNO-based system. Later, a device like the ESP32 is being considered. The objectives are:</p>
+<ul>
+<li>Communicate with a computer for real-time graphing and storage.</li>
+<li>Consider using an electronic igniter and solenoid valves for ignition and flow control; cost and reliability require further evaluation.</li>
+<li>Reference BPS.Space&rsquo;s AVA flight computer for circuit and layout inspiration, particularly for power management.</li>
+</ul>
+<h4 id="test-bench-material-and-fabrication">Test Bench Material and Fabrication</h4>
+<ul>
+<li>
+<p>Members discussed potential building materials, with the preferred option being to use scrap aluminum alloy profiles to build the frame and fix the sensors, and a cement shell with a wood base (if necessary) for the base.</p>
+</li>
+<li>
+<p>The school CNC machine in the graphics room was confirmed capable of machining soft metals like aluminum, which will aid in producing structural and electronic mounting components.</p>
+</li>
+</ul>
+<h4 id="software-and-collaboration">Software and Collaboration</h4>
+<h6 id="development-platforms">Development Platforms</h6>
+<p>The discussion covered several tools for collaborative work and version control:</p>
+<ul>
+<li>GitHub organization now live: <a href="https://github.com/Kelvin-Aerospace-Lab">Kelvin Aerospace Lab</a></li>
+<li>Initial repository for the rocket engine project created and transferred under the org for centralized access.</li>
+<li>Members explored Zed IDE for real-time collaborative coding, especially for the electronics subgroup.</li>
+</ul>
+<h6 id="simulation-tools">Simulation Tools</h6>
+<ul>
+<li>In discussion, ANSYS was reaffirmed as the long-term simulation standard for final design validation.</li>
+<li>OpenRocket and RASAero II were discussed as accessible tools for preliminary aerodynamic and performance simulations before transitioning to more complex software.</li>
+</ul>
+<h2 id="workflow--meeting-improvements">Workflow &amp; Meeting Improvements</h2>
+<p>To improve efficiency and clarity, the discussion also established a standardized session structure:</p>
+<ol>
+<li>General Presentation. All teams provide brief updates.</li>
+<li>Section Reports. Electronics, CAD &amp; CFD, documentation, etc.</li>
+<li>Discussions and Questions. Shared feedback and cross-section coordination.</li>
+<li>Breakout Discussions – Smaller, technical groups handle design-specific details.</li>
+</ol>
+<p>All content and discussions will be recorded.
+Additionally, a documentation workflow will be implemented:</p>
+<ul>
+<li>Obsidian-based notes will be auto-published to the documents website and linked on the official website</li>
+<li>Members will setup a Markdown-based pipelines to streamline publishing.</li>
+</ul>
+<h2 id="funding-and-outreach">Funding and Outreach</h2>
+<ul>
+<li>Ideas proposed and discussed by members included selling 3D prints, cookies or other small products to raise early development funds.</li>
+<li>Emphasis was placed on positioning the project as an innovative, problem-solving initiative to attract community or local sponsorship interest.</li>
+<li>The discussion involved popularization and promotional work through Instagram and Tiktok, but the members felt that user portraits were not appropriate and ultimately decided to carry out these efforts only on Youtube.</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<ul>
+<li>Finalize regenerative cooling geometry and begin simulation.</li>
+<li>Design and develop a pintle injector.</li>
+<li>Develop a basic Arduino-based test bench electronics prototype capable of reading and logging basic sensor datas.</li>
+<li>Establish the documentation website and finalize Obsidian-to-site publishing workflow.</li>
+<li>Complete the construction of the test bench framework.</li>
+<li>Update and improve the design of Discord, Github and official website, including logos suitable for different locations.</li>
+<li>Continue evaluating solenoid valve, ball valve and ignition controller.</li>
+<li>Documentation staff learn how to use Obsidian and Github.</li>
+</ul>
+
+            </div>
+            
+            <div class="text-center mt-5">
+              <a href="http://localhost:1313/meetings/" class="btn btn-outline-primary">Back to Meetings</a>
+            </div>
+          </article>
         </div>
       </div>
     </div>
-  </div><div class="footer container text-center" id="contact">
+  </section><div class="footer container text-center" id="contact">
   <ul class="footer-icons list-inline">
     
       <li>
