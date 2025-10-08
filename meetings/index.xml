@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meetings on Kelvin Aerospace Lab</title>
+    <link>http://localhost:1313/meetings/</link>
+    <description>Recent content in Meetings on Kelvin Aerospace Lab</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 07 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/meetings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meeting #04</title>
+      <link>http://localhost:1313/meetings/04/</link>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetings/04/</guid>
+      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The fourth meeting marked a major technological milestone, demonstrating the first regenerative cooling model and extensive discussions on the test bench electronics system, collaborative development tools, and workflow optimization for both documentation and meetings.&lt;/p&gt;&#xA;&lt;h2 id=&#34;technical--project-discussions&#34;&gt;Technical &amp;amp; Project Discussions&lt;/h2&gt;&#xA;&lt;h4 id=&#34;regenerative-cooling-prototype&#34;&gt;Regenerative Cooling Prototype&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The first regenerative cooling channel model was presented, which is the club&amp;rsquo;s first functional liquid rocket engine physical design. Discussions agreed that this component still needs to be optimized and improved, and requires more accurate calculations and designs, and all processes should be recorded.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meeting #03</title>
+      <link>http://localhost:1313/meetings/03/</link>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetings/03/</guid>
+      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The third meeting of the Kelvin Aerospace Lab focused on clarifying the club’s technical direction and establishing a step-by-step development roadmap for the liquid rocket engine project. The discussion centered on determining feasible prototype phases and defining short-term goals.&lt;/p&gt;&#xA;&lt;h4 id=&#34;development-plan-overview&#34;&gt;Development Plan Overview&lt;/h4&gt;&#xA;&lt;p&gt;The club agreed to begin with a gas-fed prototype that uses gaseous oxygen and room-temperature ethanol as propellants. The first prototype will not employ regenerative cooling, as the purpose of this stage is primarily to test the Laval nozzle design, the igniter and the pintle injector. A basic test bench will be developed in parallel to support static testing and data collection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meeting #02</title>
+      <link>http://localhost:1313/meetings/02/</link>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetings/02/</guid>
+      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;A follow-up meeting was held the day after the first meeting. The meeting focused on in-depth discussions around achievable short-, medium-, and long-term goals, and translated the objectives, division of labor, and toolchain established in the first meeting into a more specific roadmap and timeline.&lt;/p&gt;&#xA;&lt;h4 id=&#34;roadmap-and-timeline&#34;&gt;Roadmap and Timeline&lt;/h4&gt;&#xA;&lt;p&gt;The team has broken down long-term goals into a series of deliverable milestones, with approximate timeframes for follow-up tracking and evaluation:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meeting #01</title>
+      <link>http://localhost:1313/meetings/01/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetings/01/</guid>
+      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The first meeting of the Kelvin Aerospace Laboratory focused on introducing the club’s vision, establishing direction, and discussing initial goals. Key points included:&lt;/p&gt;&#xA;&lt;p&gt;Mission: To provide students with hands-on opportunities to explore aerospace technology, engineering, physics, and electronics through collaborative projects and research.&lt;/p&gt;&#xA;&lt;p&gt;Core Objectives: The club provides participants with hands-on engineering experience through project-based learning in aerospace-related technologies. Furthermore, through projects and science outreach, it aims to inspire more students to pursue engineering-related fields.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
