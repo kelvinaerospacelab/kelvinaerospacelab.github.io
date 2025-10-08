@@ -2,13 +2,39 @@
 <html lang="en">
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><head>
   <meta charset="utf-8" />
+  <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meetings" />
+  <meta property="og:description" content="Kelvin Aerospace Lab Offical Websitesss" />
+  <meta property="og:url" content="http://localhost:1313/meetings/" />
+  <meta property="og:site_name" content="Kelvin Aerospace Lab" />
+  
+    
+  
+  <meta property="og:locale" content="en" />
+  
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meetings" />
+  <meta name="twitter:description" content="Kelvin Aerospace Lab Offical Websitesss" />
+  
+    
+  
+    
+  
+    
+  
+  
+    
+  
   <title>Meetings</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Personal Portfolio"
+    content="Kelvin Aerospace Lab Offical Websitesss"
   />
   
     <meta name="author" content="Burton Guster" />
@@ -100,6 +126,10 @@
           <a href="/meetings/">Meetings</a>
         </li>
         
+        <li class="menu-item hvr-underline-from-left 5">
+          <a href="https://docs.kelvinaero.org">Documents</a>
+        </li>
+        
       </ul>
       
       <div class="mobile-menu">
@@ -139,6 +169,10 @@
               
               <li class="mobile-menu-item 1 mx-auto">
                 <a href="/meetings/">Meetings</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="https://docs.kelvinaero.org">Documents</a>
               </li>
               
             </ul>
@@ -207,29 +241,113 @@
     </div>
   </div>
 </section>
-<section class="about-me" id="meetings">
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      const targetElement = document.getElementById('meetings');
+      if (targetElement) {
+        const headerOffset = 50;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        
+        setTimeout(() => {
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }, 100);
+      }
+    });
+  </script>
+
+  <section class="about-me" id="meetings">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
           <h1 class="section-title">Meetings</h1>
+          <p>View our meeting minutes and discussions.</p>
+
         </div>
       </div>
       
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="text-center mb-5">
-            <p>View our meeting minutes and discussions.</p>
-
+      <div class="row mt-4">
+        
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px; z-index: 1;">
+            <h5 class="mb-3" style="font-size: 1.1rem; font-weight: 600;">Meeting Timeline</h5>
+            <ul class="experience-chart" style="font-size: 0.9rem;">
+              
+              <li>
+                <div class="single-experience">
+                  <a href="#04" class="text-dark text-decoration-none">
+                    <h4 style="font-size: 0.9rem; margin-bottom: 0.2rem; font-weight: 600;">2025-10-07</h4>
+                    <p class="mb-1" style="font-size: 0.85rem; font-weight: 600;">Meeting #04</p>
+                    
+                      
+                      <p class="text-muted mt-1 mb-2" style="font-size: 0.8rem; line-height: 1.3;">General Discussion The fourth meeting marked a major technological milestone, demonstrating the...</p>
+                    
+                  </a>
+                </div>
+              </li>
+              
+              <li>
+                <div class="single-experience">
+                  <a href="#03" class="text-dark text-decoration-none">
+                    <h4 style="font-size: 0.9rem; margin-bottom: 0.2rem; font-weight: 600;">2025-09-23</h4>
+                    <p class="mb-1" style="font-size: 0.85rem; font-weight: 600;">Meeting #03</p>
+                    
+                      
+                      <p class="text-muted mt-1 mb-2" style="font-size: 0.8rem; line-height: 1.3;">General Discussion The third meeting of the Kelvin Aerospace Lab focused on clarifying the club’s...</p>
+                    
+                  </a>
+                </div>
+              </li>
+              
+              <li>
+                <div class="single-experience">
+                  <a href="#02" class="text-dark text-decoration-none">
+                    <h4 style="font-size: 0.9rem; margin-bottom: 0.2rem; font-weight: 600;">2025-09-16</h4>
+                    <p class="mb-1" style="font-size: 0.85rem; font-weight: 600;">Meeting #02</p>
+                    
+                      
+                      <p class="text-muted mt-1 mb-2" style="font-size: 0.8rem; line-height: 1.3;">General Discussion A follow-up meeting was held the day after the first meeting. The meeting focused...</p>
+                    
+                  </a>
+                </div>
+              </li>
+              
+              <li>
+                <div class="single-experience">
+                  <a href="#01" class="text-dark text-decoration-none">
+                    <h4 style="font-size: 0.9rem; margin-bottom: 0.2rem; font-weight: 600;">2025-09-15</h4>
+                    <p class="mb-1" style="font-size: 0.85rem; font-weight: 600;">Meeting #01</p>
+                    
+                      
+                      <p class="text-muted mt-1 mb-2" style="font-size: 0.8rem; line-height: 1.3;">General Discussion The first meeting of the Kelvin Aerospace Laboratory focused on introducing the...</p>
+                    
+                  </a>
+                </div>
+              </li>
+              
+            </ul>
           </div>
-          
-          <div class="meetings-list">
+        </div>
+        
+        
+        <div class="col-lg-8">
+          <div class="posts">
             
-            <div class="card mb-4">
+            <div id="04" class="post text-left card mb-4">
+              
               <div class="card-body">
                 <h2 class="card-title">
-                  <a href="/meetings/04/" class="text-dark">251007 - Meeting #04</a>
+                  <a href="/meetings/04/" class="text-dark">
+                    2025-10-07 - Meeting #04
+                  </a>
                 </h2>
-                <p class="text-muted">October 7, 2025</p>
+                <p class="text-muted">Tuesday, October 7, 2025</p>
+                
                 <div class="card-text">
                   <h2 id="general-discussion">General Discussion</h2>
 <p>The fourth meeting marked a major technological milestone, demonstrating the first regenerative cooling model and extensive discussions on the test bench electronics system, collaborative development tools, and workflow optimization for both documentation and meetings.</p>
@@ -240,17 +358,22 @@
 <p>The first regenerative cooling channel model was presented, which is the club&rsquo;s first functional liquid rocket engine physical design. Discussions agreed that this component still needs to be optimized and improved, and requires more accurate calculations and designs, and all processes should be recorded.</p>
                 </div>
                 
-                <a href="/meetings/04/" class="btn btn-outline-primary mt-3">View Details</a>
+                
+                <a href="/meetings/04/" class="btn btn-outline-primary mt-3">Read More</a>
                 
               </div>
             </div>
             
-            <div class="card mb-4">
+            <div id="03" class="post text-left card mb-4">
+              
               <div class="card-body">
                 <h2 class="card-title">
-                  <a href="/meetings/03/" class="text-dark">250923 - Meeting #03</a>
+                  <a href="/meetings/03/" class="text-dark">
+                    2025-09-23 - Meeting #03
+                  </a>
                 </h2>
-                <p class="text-muted">September 23, 2025</p>
+                <p class="text-muted">Tuesday, September 23, 2025</p>
+                
                 <div class="card-text">
                   <h2 id="general-discussion">General Discussion</h2>
 <p>The third meeting of the Kelvin Aerospace Lab focused on clarifying the club’s technical direction and establishing a step-by-step development roadmap for the liquid rocket engine project. The discussion centered on determining feasible prototype phases and defining short-term goals.</p>
@@ -258,17 +381,22 @@
 <p>The club agreed to begin with a gas-fed prototype that uses gaseous oxygen and room-temperature ethanol as propellants. The first prototype will not employ regenerative cooling, as the purpose of this stage is primarily to test the Laval nozzle design, the igniter and the pintle injector. A basic test bench will be developed in parallel to support static testing and data collection.</p>
                 </div>
                 
-                <a href="/meetings/03/" class="btn btn-outline-primary mt-3">View Details</a>
+                
+                <a href="/meetings/03/" class="btn btn-outline-primary mt-3">Read More</a>
                 
               </div>
             </div>
             
-            <div class="card mb-4">
+            <div id="02" class="post text-left card mb-4">
+              
               <div class="card-body">
                 <h2 class="card-title">
-                  <a href="/meetings/02/" class="text-dark">250916 - Meeting #02</a>
+                  <a href="/meetings/02/" class="text-dark">
+                    2025-09-16 - Meeting #02
+                  </a>
                 </h2>
-                <p class="text-muted">September 16, 2025</p>
+                <p class="text-muted">Tuesday, September 16, 2025</p>
+                
                 <div class="card-text">
                   <h2 id="general-discussion">General Discussion</h2>
 <p>A follow-up meeting was held the day after the first meeting. The meeting focused on in-depth discussions around achievable short-, medium-, and long-term goals, and translated the objectives, division of labor, and toolchain established in the first meeting into a more specific roadmap and timeline.</p>
@@ -276,17 +404,22 @@
 <p>The team has broken down long-term goals into a series of deliverable milestones, with approximate timeframes for follow-up tracking and evaluation:</p>
                 </div>
                 
-                <a href="/meetings/02/" class="btn btn-outline-primary mt-3">View Details</a>
+                
+                <a href="/meetings/02/" class="btn btn-outline-primary mt-3">Read More</a>
                 
               </div>
             </div>
             
-            <div class="card mb-4">
+            <div id="01" class="post text-left card mb-4">
+              
               <div class="card-body">
                 <h2 class="card-title">
-                  <a href="/meetings/01/" class="text-dark">250915 - Meeting #01</a>
+                  <a href="/meetings/01/" class="text-dark">
+                    2025-09-15 - Meeting #01
+                  </a>
                 </h2>
-                <p class="text-muted">September 15, 2025</p>
+                <p class="text-muted">Monday, September 15, 2025</p>
+                
                 <div class="card-text">
                   <h2 id="general-discussion">General Discussion</h2>
 <p>The first meeting of the Kelvin Aerospace Laboratory focused on introducing the club’s vision, establishing direction, and discussing initial goals. Key points included:</p>
@@ -294,7 +427,8 @@
 <p>Core Objectives: The club provides participants with hands-on engineering experience through project-based learning in aerospace-related technologies. Furthermore, through projects and science outreach, it aims to inspire more students to pursue engineering-related fields.</p>
                 </div>
                 
-                <a href="/meetings/01/" class="btn btn-outline-primary mt-3">View Details</a>
+                
+                <a href="/meetings/01/" class="btn btn-outline-primary mt-3">Read More</a>
                 
               </div>
             </div>
