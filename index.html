@@ -83,9 +83,13 @@
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Head Partial --><!-- Custom CSS -->
+
+<link rel="stylesheet" href="/css/custom.min.css" media="screen" />
 </head>
 </head>
-  <body> <!-- preloader start -->
+  <body class="home"> <!-- preloader start -->
 <div class="preloader">
   
   <img src="/images/preloader.gif" alt="preloader" />
@@ -215,6 +219,94 @@
   </nav>
 </section>
 
+<script>
+  
+  (function() {
+    
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) return;
+    
+    const menu = document.getElementById('menu');
+    const menuContainer = document.querySelector('.menu-container');
+    const desktopLogo = document.getElementById('desktop-logo');
+    
+    if (!menu || !menuContainer) return;
+    
+    
+    const lightLogoSrc = desktopLogo ? desktopLogo.getAttribute('src') : '';
+    
+    const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+    
+    
+    const heroHeight = window.innerHeight;
+    
+    function updateMenuOpacity() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      
+      
+      let opacity = Math.min(scrollY / heroHeight, 1);
+      
+      
+      if (opacity === 0) {
+        
+        menuContainer.style.background = 'transparent';
+        menuContainer.classList.remove('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = lightLogoSrc;
+        }
+      } else {
+        
+        menuContainer.style.background = `rgba(255, 255, 255, ${opacity})`;
+        menuContainer.classList.add('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = darkLogoSrc;
+        }
+      }
+      
+      
+      if (scrollY > 10) {
+        menuContainer.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${opacity * 0.1})`;
+      } else {
+        menuContainer.style.boxShadow = 'none';
+      }
+    }
+    
+    
+    updateMenuOpacity();
+    
+    
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateMenuOpacity();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    
+    window.addEventListener('resize', updateMenuOpacity);
+  })();
+  
+  
+  (function() {
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) {
+      const desktopLogo = document.getElementById('desktop-logo');
+      if (desktopLogo) {
+        const lightLogoSrc = desktopLogo.getAttribute('src');
+        const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+        desktopLogo.src = darkLogoSrc;
+      }
+    }
+  })();
+</script>
+
 <section class="header" id="header">
   
   
@@ -274,7 +366,7 @@
           <p>Thank you for being here. You can join us by clicking below. If you have any questions feel free to reach out on <a href="#contact">Github or by email</a>!</p>
            
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdcpv2EoyCAY6ObyjRmSD4pucwr8-rMkZ6OuehquGFn_aMuwg/viewform?usp=dialog"
+            href="https://forms.gle/Nm9CS4XbooaBRuog6"
             target="_blank"
             rel="noreferrer"
             class="button download-cv"
@@ -309,7 +401,7 @@
                  
                 <span>2024-Current</span>
                  
-                <p>Basic skills learning and early attempts at similar projects.</p>
+                <p>Technology accumulation of early engineering-related projects.</p>
                 
               </div>
             </li>
@@ -324,7 +416,7 @@
                  
                 <span>2025-Current</span>
                  
-                <p>A simple prototype is planned.</p>
+                <p>A prototype using GOX ethanol for regenerative cooling is planned.</p>
                 
               </div>
             </li>
@@ -339,7 +431,7 @@
                  
                 <span>2025-2026</span>
                  
-                <p>Improve understanding of subject component design.</p>
+                <p>Improve the prototype to try to achieve more stable combustion, cooling and greater thrust.</p>
                 
               </div>
             </li>
@@ -365,11 +457,26 @@
               <div class="single-experience">
                 <h3>TVC control system</h3>
                 
-                <span>Hover and control implementation |</span>
+                <span>Development and testing of control system |</span>
                  
                 <span>2026-2027</span>
                  
-                <p>Implementing hovering based on PID algorithm.</p>
+                <p>Implementing hovering based on neural network learning and PID algorithm.</p>
+                
+              </div>
+            </li>
+          
+          
+          
+            <li>
+              <div class="single-experience">
+                <h3>Hovering and vertical take-off and landing (VTOL)</h3>
+                
+                <span>Implementation of control system |</span>
+                 
+                <span>2026-2027</span>
+                 
+                <p>Testing and improving results to achieve vertical take-off and landing</p>
                 
               </div>
             </li>

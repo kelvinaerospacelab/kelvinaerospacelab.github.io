@@ -35,7 +35,7 @@
   <title>Meetings</title>
 
   <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
     content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment."
@@ -82,9 +82,13 @@
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Head Partial --><!-- Custom CSS -->
+
+<link rel="stylesheet" href="/css/custom.min.css" media="screen" />
 </head>
 </head>
-  <body> <!-- preloader start -->
+  <body class="meetings"> <!-- preloader start -->
 <div class="preloader">
   
   <img src="/images/preloader.gif" alt="preloader" />
@@ -214,6 +218,94 @@
   </nav>
 </section>
 
+<script>
+  
+  (function() {
+    
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) return;
+    
+    const menu = document.getElementById('menu');
+    const menuContainer = document.querySelector('.menu-container');
+    const desktopLogo = document.getElementById('desktop-logo');
+    
+    if (!menu || !menuContainer) return;
+    
+    
+    const lightLogoSrc = desktopLogo ? desktopLogo.getAttribute('src') : '';
+    
+    const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+    
+    
+    const heroHeight = window.innerHeight;
+    
+    function updateMenuOpacity() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      
+      
+      let opacity = Math.min(scrollY / heroHeight, 1);
+      
+      
+      if (opacity === 0) {
+        
+        menuContainer.style.background = 'transparent';
+        menuContainer.classList.remove('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = lightLogoSrc;
+        }
+      } else {
+        
+        menuContainer.style.background = `rgba(255, 255, 255, ${opacity})`;
+        menuContainer.classList.add('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = darkLogoSrc;
+        }
+      }
+      
+      
+      if (scrollY > 10) {
+        menuContainer.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${opacity * 0.1})`;
+      } else {
+        menuContainer.style.boxShadow = 'none';
+      }
+    }
+    
+    
+    updateMenuOpacity();
+    
+    
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateMenuOpacity();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    
+    window.addEventListener('resize', updateMenuOpacity);
+  })();
+  
+  
+  (function() {
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) {
+      const desktopLogo = document.getElementById('desktop-logo');
+      if (desktopLogo) {
+        const lightLogoSrc = desktopLogo.getAttribute('src');
+        const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+        desktopLogo.src = darkLogoSrc;
+      }
+    }
+  })();
+</script>
+
 
 
 
@@ -325,72 +417,74 @@
       <div class="row">
         <div class="col-12 text-center">
           <h1 class="section-title">Meetings</h1>
-          <p>View our meeting minutes and discussions.</p>
-
+          <div class="mb-2"><p>View our meeting minutes and discussions.</p>
+</div>
         </div>
       </div>
       
-      <div class="row mt-4">
+      <div class="row mt-3">
         
         <div class="col-lg-4 pe-0">
-          <div class="sticky-top" style="top: 100px; z-index: 1; width: 100%;">
-            <h5 class="mb-3" style="font-size: 1rem; font-weight: 600;">Meeting Timeline</h5>
-            <div class="timeline-scroll-container" style="max-height: 75vh; overflow-y: auto; padding-right: 8px; padding-left: 5px;">
-              <ul class="experience-chart" style="font-size: 0.95rem; padding-left: 0; list-style: none; margin-bottom: 0; width: 100%;">
-              
-              <li>
-                <div class="single-experience">
-                  <a href="#04" class="text-dark text-decoration-none">
-                    <h4 style="font-size: 0.85rem; margin-bottom: 0.15rem; font-weight: 600;">2025-10-07</h4>
-                    <p class="mb-1" style="font-size: 0.8rem; font-weight: 600;">Meeting #04</p>
-                    
+          <div class="sticky-top" style="top: 80px; z-index: 1; width: 100%;">
+            <div>
+              <h5 class="mb-3" style="font-size: 1.25rem; font-weight: 600;">Meeting Timeline</h5>
+              <div class="timeline-scroll-container" style="max-height: calc(100vh - 100px); overflow-y: auto; padding-right: 8px; padding-left: 5px; padding-bottom: 0px;">
+                <ul class="experience-chart" style="font-size: 1rem; padding-left: 0; list-style: none; margin-bottom: 0; width: 100%; padding-bottom: 20px;">
+                
+                <li>
+                  <div class="single-experience">
+                    <a href="#04" class="text-dark text-decoration-none">
+                      <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 600;">2025-10-07</h4>
+                      <p class="mb-1" style="font-size: 0.9rem; font-weight: 600;">Meeting #04</p>
                       
-                      <p class="text-muted mt-1 mb-1" style="font-size: 0.75rem; line-height: 1.25;">General Discussion The fourth meeting marked a major technological milestone,...</p>
-                    
-                  </a>
-                </div>
-              </li>
-              
-              <li>
-                <div class="single-experience">
-                  <a href="#03" class="text-dark text-decoration-none">
-                    <h4 style="font-size: 0.85rem; margin-bottom: 0.15rem; font-weight: 600;">2025-09-23</h4>
-                    <p class="mb-1" style="font-size: 0.8rem; font-weight: 600;">Meeting #03</p>
-                    
+                        
+                        <p class="text-muted mt-1 mb-1" style="font-size: 0.85rem; line-height: 1.3;">General Discussion The fourth meeting marked a major technological milestone,...</p>
                       
-                      <p class="text-muted mt-1 mb-1" style="font-size: 0.75rem; line-height: 1.25;">General Discussion The third meeting of the Kelvin Aerospace Lab focused on...</p>
-                    
-                  </a>
-                </div>
-              </li>
-              
-              <li>
-                <div class="single-experience">
-                  <a href="#02" class="text-dark text-decoration-none">
-                    <h4 style="font-size: 0.85rem; margin-bottom: 0.15rem; font-weight: 600;">2025-09-16</h4>
-                    <p class="mb-1" style="font-size: 0.8rem; font-weight: 600;">Meeting #02</p>
-                    
+                    </a>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="single-experience">
+                    <a href="#03" class="text-dark text-decoration-none">
+                      <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 600;">2025-09-23</h4>
+                      <p class="mb-1" style="font-size: 0.9rem; font-weight: 600;">Meeting #03</p>
                       
-                      <p class="text-muted mt-1 mb-1" style="font-size: 0.75rem; line-height: 1.25;">General Discussion A follow-up meeting was held the day after the first meeting....</p>
-                    
-                  </a>
-                </div>
-              </li>
-              
-              <li>
-                <div class="single-experience">
-                  <a href="#01" class="text-dark text-decoration-none">
-                    <h4 style="font-size: 0.85rem; margin-bottom: 0.15rem; font-weight: 600;">2025-09-15</h4>
-                    <p class="mb-1" style="font-size: 0.8rem; font-weight: 600;">Meeting #01</p>
-                    
+                        
+                        <p class="text-muted mt-1 mb-1" style="font-size: 0.85rem; line-height: 1.3;">General Discussion The third meeting of the Kelvin Aerospace Lab focused on...</p>
                       
-                      <p class="text-muted mt-1 mb-1" style="font-size: 0.75rem; line-height: 1.25;">General Discussion The first meeting of the Kelvin Aerospace Laboratory focused...</p>
-                    
-                  </a>
-                </div>
-              </li>
-              
-              </ul>
+                    </a>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="single-experience">
+                    <a href="#02" class="text-dark text-decoration-none">
+                      <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 600;">2025-09-16</h4>
+                      <p class="mb-1" style="font-size: 0.9rem; font-weight: 600;">Meeting #02</p>
+                      
+                        
+                        <p class="text-muted mt-1 mb-1" style="font-size: 0.85rem; line-height: 1.3;">General Discussion A follow-up meeting was held the day after the first meeting....</p>
+                      
+                    </a>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="single-experience">
+                    <a href="#01" class="text-dark text-decoration-none">
+                      <h4 style="font-size: 0.95rem; margin-bottom: 0.2rem; font-weight: 600;">2025-09-15</h4>
+                      <p class="mb-1" style="font-size: 0.9rem; font-weight: 600;">Meeting #01</p>
+                      
+                        
+                        <p class="text-muted mt-1 mb-1" style="font-size: 0.85rem; line-height: 1.3;">General Discussion The first meeting of the Kelvin Aerospace Laboratory focused...</p>
+                      
+                    </a>
+                  </div>
+                </li>
+                
+                </ul>
+              </div>
             </div>
           </div>
         </div>
