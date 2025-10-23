@@ -1,4 +1,4 @@
-<img width="1020" height="484" alt="aurora-rou - Copy" src="https://github.com/user-attachments/assets/f161cdb0-b331-4f1a-84d1-3dea928cd19a" />
+<img width="1020" height="484" alt="aurora-rou - Copy" src="https://github.com/user-attachments/assets/69a5d180-22b5-46b6-954a-d1ecacb1a1ba" />
 
 ## Kelvin Aerospace Lab
 
