@@ -6,13 +6,20 @@
     <description>Recent content in Updates on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/updates/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Simulation Updates #1</title>
+      <link>http://localhost:1313/updates/106-simulation/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/updates/106-simulation/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Website Updates #2</title>
-      <link>http://localhost:1313/updates/106-website/</link>
+      <link>http://localhost:1313/updates/105-website/</link>
       <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/updates/106-website/</guid>
+      <guid>http://localhost:1313/updates/105-website/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;Major improvements to the Updates page.&lt;/li&gt;&#xA;&lt;li&gt;Improved the Home page title bar.&lt;/li&gt;&#xA;&lt;li&gt;Optimized font and layout on the Meetings page.&lt;/li&gt;&#xA;&lt;li&gt;Added support for Zapier bots.&lt;/li&gt;&#xA;&lt;li&gt;Improved questionnaire.&lt;/li&gt;&#xA;&lt;li&gt;Updated the homepage route map.&lt;/li&gt;&#xA;&lt;li&gt;Improved About Us description.&lt;/li&gt;&#xA;&lt;li&gt;Standardized and improved the LOGO usage.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>

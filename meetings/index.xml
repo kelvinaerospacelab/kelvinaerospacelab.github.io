@@ -6,8 +6,22 @@
     <description>Recent content in Meetings on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/meetings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meeting #06</title>
+      <link>http://localhost:1313/meetings/06/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetings/06/</guid>
+      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The sixth meeting focused on consolidating progress across technical development, funding strategies, and organizational workflows. A key achievement was the establishment of a centralized Google Docs system to track component procurement estimates and sponsor outreach efforts, streamlining coordination among team members. The team reviewed challenges in simulation efforts for the regenerative cooling prototype, advanced discussions on electronics for the test bench, and explored innovative funding approaches to support the project’s goals.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meeting #05</title>
+      <link>http://localhost:1313/meetings/05/</link>
+      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetings/05/</guid>
+      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The fifth meeting focused on deeper exploration of the rocket engine architecture, funding strategies, and organizational structure. The team reviewed progress on the website, discussed collaborative tools, and outlined plans for propulsion kit development and STEM outreach.&lt;/p&gt;&#xA;&lt;h2 id=&#34;technical--project-discussions&#34;&gt;Technical &amp;amp; Project Discussions&lt;/h2&gt;&#xA;&lt;h4 id=&#34;rocket-engine-architecture&#34;&gt;Rocket Engine Architecture&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Propulsion Kit Development&lt;/strong&gt;: The team discussed the development of an out-of-the-box propulsion kit, including the engine, control system, algorithms, and test bench. The kit will have variants for educational and competition use, enabling aerospace enthusiasts to focus on rocket performance rather than engine development.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Meeting #04</title>
       <link>http://localhost:1313/meetings/04/</link>
