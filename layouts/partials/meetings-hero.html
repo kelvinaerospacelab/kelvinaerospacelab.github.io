@@ -1,0 +1,49 @@
+{{ $hero := .Site.Data.meetings.hero }}
+{{ if .Params.hero }}
+  {{ $hero = merge .Params.hero $hero }}
+{{ end }}
+
+{{ with $hero }}
+<section class="header" id="meetings-hero">
+  <div class="hero-image">
+    {{ if .mobile_bg_image }}
+    <img
+      class="d-none d-md-block"
+      src="{{ .bg_image | relURL }}"
+      alt="background"
+    />
+    <img
+      class="d-md-none"
+      src="{{ .mobile_bg_image | relURL }}"
+      alt="background"
+    />
+    {{ else }}
+    <img src="{{ .bg_image | relURL }}" alt="background" />
+    {{ end }}
+  </div>
+  <div class="container">
+    <div class="row content">
+      <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 head-container">
+        <div class="head-holder">
+          <h1 class="introduction">{{ .title | safeHTML }}</h1>
+          {{ if .occupations }}
+          <div class="animated-text">
+            <strong class="cd-headline clip">
+              <span class="cd-words-wrapper">
+                {{ range $index, $elements:= .occupations }}
+                  {{ if eq $index 0 }}
+                  <b class="is-visible">{{ . }}</b>
+                  {{ else }}
+                  <b>{{ . }}</b>
+                  {{ end }}
+                {{ end }}
+              </span>
+            </strong>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

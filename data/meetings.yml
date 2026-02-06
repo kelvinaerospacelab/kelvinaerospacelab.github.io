@@ -1,0 +1,29 @@
+# Hero Area for Meetings Page
+hero:
+  title: "<span class='title-kelvin'>MEETING</span> NOTES"
+  
+  # animated text loop
+  occupations:
+    - 'Meeting minutes and discussions'
+    - 'Team collaboration updates'
+    - 'Project progress tracking'
+
+  # hero background image
+  bg_image: 'images/moon.jpg'
+  # optional mobile breakpoint background
+  mobile_bg_image: 'images/moon.jpg'
+
+# Meetings section configuration
+meetings:
+  enable: true
+  title: "Meeting Notes & Minutes"
+  button:
+    enable: true
+    label: "View All Meetings"
+    link: "/meetings/"
+
+# Recent meetings to be shown on the homepage (optional)
+recent_meetings:
+  enable: true
+  title: "Recent Meetings"
+  show_items: 3  # Number of recent meetings to show

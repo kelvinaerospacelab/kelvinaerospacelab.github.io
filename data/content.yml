@@ -1,0 +1,93 @@
+########################## hero area ##########################
+hero:
+  title: "<span class='title-kelvin'>KELVIN</span> AEROSPACE LAB"
+
+  # animated text loop
+  occupations:
+    - 'Design, manufacture, and test rocket engines'
+    - 'Advancing STEM Education Accessibility'
+    - 'Open Source. Open Knowledge.'
+
+  # hero background image
+  bg_image: 'images/background.jpg'
+  # optional mobile breakpoint background
+  mobile_bg_image: 'images/gus_small.jpg'
+
+########################### About ##################################
+about:
+  enable: true
+  image: 'images/kaldoc.png'
+  title: 'Solving problems in real engineering practice'
+  content: |
+    Engineering is a practice-based discipline. We believe that the only way to turn design into reality is to truly attempt and solve real engineering problems.
+    
+    We welcome you to join us.
+  button:
+    enable: true
+    label: 'JOIN THE TEAM'
+    link: https://forms.gle/Nm9CS4XbooaBRuog6
+    icon: 'fa fa-rocket'
+
+###########################3 Experience ##############################
+experience:
+  enable: true
+  title: 'Development Roadmap'
+  experience_list:
+    - name: Phase 1 - Gas-Fed Prototype
+      company: Current Phase
+      duration: 'Sept 2025 - March 2026'
+      content: 200N thrust engine using GOX/ethanol with regenerative cooling. Validating combustion, thermal management, and safe operation.
+
+    - name: Phase 2 - Optimized Design + TVC
+      company: Development
+      duration: 'March - May 2026'
+      content: Thrust vector control, improved efficiency, movable pintle injector research. Complete 30-second stable burn.
+
+    - name: Phase 3 - Advanced Control Systems
+      company: Research & Testing
+      duration: 'May 2026 - 2027'
+      content: Neural network-based hover control. Flight-capable propulsion system.
+
+############################### Skill #################################
+skill:
+  enable: true
+  title: 'What You Gain'
+  showpercent: false
+  skill_list:
+    - name: 'Real Engineering Experience'
+      percentage: '100%'
+
+    - name: 'Thermodynamics & Fluid Mechanics'
+      percentage: '95%'
+
+    - name: 'CAD, Simulation & Fabrication'
+      percentage: '90%'
+
+    - name: 'Control Systems & Programming'
+      percentage: '85%'
+      
+    - name: 'Testing & Safety Protocols'
+      percentage: '90%'
+
+    - name: 'Problem-Solving Under Uncertainty'
+      percentage: '95%'
+
+######################### funfacts #############################3
+funfacts:
+  enable: true
+  funfacts_list:
+    - name: 'Meetings Held'
+      image: 'images/icons/coffee.png'
+      count: '7'
+
+    - name: 'Hours of Development'
+      image: 'images/icons/web-development.png'
+      count: '500'
+      
+    - name: 'Team Members'
+      image: 'images/icons/coffee.png'
+      count: '10'
+
+    - name: 'Members'
+      image: 'images/icons/happy.png'
+      count: '7'
