@@ -6,8 +6,15 @@
     <description>Recent content in Meetings on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Oct 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/meetings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meeting #07</title>
+      <link>http://localhost:1313/meetings/07/</link>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/meetings/07/</guid>
+      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The seventh meeting marked a significant milestone for the Kelvin Aerospace Laboratory. With the completion of comprehensive discussions regarding the project&amp;rsquo;s core technical goals, organizational structure, and funding strategies, the team concluded that the weekly meeting format has fulfilled its initial purpose. Moving forward, the team will transition from regular weekly meetings updates to event-driven meeting  updates, where gatherings will be organized when there are significant technical achievements, major milestones reached, or critical decisions to be made.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Meeting #06</title>
       <link>http://localhost:1313/meetings/06/</link>

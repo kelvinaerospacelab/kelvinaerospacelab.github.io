@@ -1,111 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kelvin Aerospace Lab</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Kelvin Aerospace Lab</description>
+    <title>References on Kelvin Aerospace Lab</title>
+    <link>http://localhost:1313/reference/</link>
+    <description>Recent content in References on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Welcome to Kelvin Aerospace Lab (KAL)</title>
-      <link>http://localhost:1313/intro/</link>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/intro/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/klvweb.png&#34; alt=&#34;Kelvin Aerospace Lab Logo&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-us&#34;&gt;About Us&lt;/h2&gt;&#xA;&lt;p&gt;Kelvin Aerospace Lab (KAL) is a non-profit student-led organization founded in September 2025. We are committed to providing high school students with real-world hands-on engineering experience while helping to expand STEM education.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Engineering Innovation&lt;/strong&gt;: We develop liquid rocket propulsion systems for education and competition, giving students experience with theory, design, simulation, manufacturing, and testing.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;STEM Accessibility&lt;/strong&gt;: We support schools lacking STEM programs through equipment donations, open-source software tools, particularly for underfunded districts.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kelvin Aerospace Lab White Paper</title>
-      <link>http://localhost:1313/whitepaper_framework/</link>
-      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/whitepaper_framework/</guid>
-      <description>&lt;h2 id=&#34;1-executive-summary&#34;&gt;1. EXECUTIVE SUMMARY&lt;/h2&gt;&#xA;&lt;p&gt;Kelvin Aerospace Lab (KAL) is a non-profit student-led organization founded in September 2025 with a dual mission: providing opportunities for students to participate in and gain real-world engineering experience through liquid rocket development, and advancing STEM accessibility in underserved communities.&lt;/p&gt;&#xA;&lt;p&gt;We believe that while robotics competitions offer valuable experience, they operate within established frameworks with predictable outcomes. KAL’s approach is fundamentally different. Development requires students to work with theory, design, simulation, control, manufacturing, and testing, where solutions are not predetermined. The level of complexity mirrors what engineers face in industry, providing students with irreplaceable experience in problem-solving.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meeting #07</title>
-      <link>http://localhost:1313/meetings/07/</link>
-      <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/meetings/07/</guid>
-      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The seventh meeting marked a significant milestone for the Kelvin Aerospace Laboratory. With the completion of comprehensive discussions regarding the project&amp;rsquo;s core technical goals, organizational structure, and funding strategies, the team concluded that the weekly meeting format has fulfilled its initial purpose. Moving forward, the team will transition from regular weekly meetings updates to event-driven meeting  updates, where gatherings will be organized when there are significant technical achievements, major milestones reached, or critical decisions to be made.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meeting #06</title>
-      <link>http://localhost:1313/meetings/06/</link>
-      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/meetings/06/</guid>
-      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The sixth meeting focused on consolidating progress across technical development, funding strategies, and organizational workflows. A key achievement was the establishment of a centralized Google Docs system to track component procurement estimates and sponsor outreach efforts, streamlining coordination among team members. The team reviewed challenges in simulation efforts for the regenerative cooling prototype, advanced discussions on electronics for the test bench, and explored innovative funding approaches to support the project’s goals.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meeting #05</title>
-      <link>http://localhost:1313/meetings/05/</link>
-      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/meetings/05/</guid>
-      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The fifth meeting focused on deeper exploration of the rocket engine architecture, funding strategies, and organizational structure. The team reviewed progress on the website, discussed collaborative tools, and outlined plans for propulsion kit development and STEM outreach.&lt;/p&gt;&#xA;&lt;h2 id=&#34;technical--project-discussions&#34;&gt;Technical &amp;amp; Project Discussions&lt;/h2&gt;&#xA;&lt;h4 id=&#34;rocket-engine-architecture&#34;&gt;Rocket Engine Architecture&lt;/h4&gt;&#xA;&lt;p&gt;&lt;strong&gt;Propulsion Kit Development&lt;/strong&gt;: The team discussed the development of an out-of-the-box propulsion kit, including the engine, control system, algorithms, and test bench. The kit will have variants for educational and competition use, enabling aerospace enthusiasts to focus on rocket performance rather than engine development.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Website Updates #2</title>
-      <link>http://localhost:1313/updates/105-website/</link>
-      <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/updates/105-website/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;Major improvements to the Updates page.&lt;/li&gt;&#xA;&lt;li&gt;Improved the Home page title bar.&lt;/li&gt;&#xA;&lt;li&gt;Optimized font and layout on the Meetings page.&lt;/li&gt;&#xA;&lt;li&gt;Added support for Zapier bots.&lt;/li&gt;&#xA;&lt;li&gt;Improved questionnaire.&lt;/li&gt;&#xA;&lt;li&gt;Updated the homepage route map.&lt;/li&gt;&#xA;&lt;li&gt;Improved About Us description.&lt;/li&gt;&#xA;&lt;li&gt;Standardized and improved the LOGO usage.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Design Updates #1</title>
-      <link>http://localhost:1313/updates/104-design/</link>
-      <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/updates/104-design/</guid>
-      <description>&lt;h2 id=&#34;engine-design&#34;&gt;Engine Design&lt;/h2&gt;&#xA;&lt;p&gt;After confirming the use of gaseous oxygen ethanol, regenerative cooling and pintle injectors, we decided to start the concept design. This step helps to visually demonstrate the general shape and technology.&lt;/p&gt;&#xA;&lt;p&gt;We used Fusion 360 to build the first concept model with a regenerative cooling loop to validate how regenerative cooling could be implemented.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/updates/104-draft.png&#34; alt=&#34;Engine Concept Design&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This model illustrates the basic operation of the regenerative cooling circuit. Low-temperature ethanol enters the annular flow divider at the end of the engine through a side pipe. It then flows through the regenerative cooling circuit inside the engine sidewall and returns to the top of the engine, entering the annular gap. Gaseous oxygen enters the engine directly through a pintle injector, where it collides with the ethanol at the opening, mixing and atomizing.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Electronic Updates #1</title>
-      <link>http://localhost:1313/updates/103-electronics/</link>
-      <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/updates/103-electronics/</guid>
-      <description>&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;&#xA;&lt;p&gt;We need to collect data from testing to improve the engine. This data will include thrust, mass flow, temperature, pressure, and vibration. To ensure safety, all this data will be collected by sensors and transmitted back to a computer, where it can be plotted in real time and exported after completion. There are several options for achieving this goal.&lt;/p&gt;&#xA;&lt;p&gt;The electronics team confirmed that the Arduino serial plotter can have multiple data points, which means we don&amp;rsquo;t need an additional ESP32 for data logging, saving costs.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meeting #04</title>
-      <link>http://localhost:1313/meetings/04/</link>
-      <pubDate>Tue, 07 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/meetings/04/</guid>
-      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The fourth meeting marked a major technological milestone, demonstrating the first regenerative cooling model and extensive discussions on the test bench electronics system, collaborative development tools, and workflow optimization for both documentation and meetings.&lt;/p&gt;&#xA;&lt;h2 id=&#34;technical--project-discussions&#34;&gt;Technical &amp;amp; Project Discussions&lt;/h2&gt;&#xA;&lt;h4 id=&#34;regenerative-cooling-prototype&#34;&gt;Regenerative Cooling Prototype&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The first regenerative cooling channel model was presented, which is the club&amp;rsquo;s first functional liquid rocket engine physical design. Discussions agreed that this component still needs to be optimized and improved, and requires more accurate calculations and designs, and all processes should be recorded.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meeting #03</title>
-      <link>http://localhost:1313/meetings/03/</link>
-      <pubDate>Tue, 23 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/meetings/03/</guid>
-      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The third meeting of the Kelvin Aerospace Lab focused on clarifying the club’s technical direction and establishing a step-by-step development roadmap for the liquid rocket engine project. The discussion centered on determining feasible prototype phases and defining short-term goals.&lt;/p&gt;&#xA;&lt;h4 id=&#34;development-plan-overview&#34;&gt;Development Plan Overview&lt;/h4&gt;&#xA;&lt;p&gt;The club agreed to begin with a gas-fed prototype that uses gaseous oxygen and room-temperature ethanol as propellants. The first prototype will not employ regenerative cooling, as the purpose of this stage is primarily to test the Laval nozzle design, the igniter and the pintle injector. A basic test bench will be developed in parallel to support static testing and data collection.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Website Updates #1</title>
-      <link>http://localhost:1313/updates/102-website/</link>
-      <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/updates/102-website/</guid>
-      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Private domain are now accessible: &lt;a href=&#34;https://www.kelvinaero.org&#34;&gt;www.kelvinaero.org&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;A new Meetings page has been added to the website. Here you can find our current agenda and progress.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The documentation platform is now open and accessible. Here you can find all our research articles and resources.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The process of regular meetings has been changed and improved.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;General Presentation. All teams provide brief updates.&lt;/li&gt;&#xA;&lt;li&gt;Section Reports. Electronics, CAD &amp;amp; CFD, documentation, etc.&lt;/li&gt;&#xA;&lt;li&gt;Discussions and Questions. Shared feedback and cross-section coordination.&lt;/li&gt;&#xA;&lt;li&gt;Breakout Discussions – Smaller, technical groups handle design-specific details.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Completed the record-keeping of previous meetings.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meeting #02</title>
-      <link>http://localhost:1313/meetings/02/</link>
-      <pubDate>Tue, 16 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/meetings/02/</guid>
-      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;A follow-up meeting was held the day after the first meeting. The meeting focused on in-depth discussions around achievable short-, medium-, and long-term goals, and translated the objectives, division of labor, and toolchain established in the first meeting into a more specific roadmap and timeline.&lt;/p&gt;&#xA;&lt;h4 id=&#34;roadmap-and-timeline&#34;&gt;Roadmap and Timeline&lt;/h4&gt;&#xA;&lt;p&gt;The team has broken down long-term goals into a series of deliverable milestones, with approximate timeframes for follow-up tracking and evaluation:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meeting #01</title>
-      <link>http://localhost:1313/meetings/01/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/meetings/01/</guid>
-      <description>&lt;h2 id=&#34;general-discussion&#34;&gt;General Discussion&lt;/h2&gt;&#xA;&lt;p&gt;The first meeting of the Kelvin Aerospace Laboratory focused on introducing the club’s vision, establishing direction, and discussing initial goals. Key points included:&lt;/p&gt;&#xA;&lt;p&gt;Mission: To provide students with hands-on opportunities to explore aerospace technology, engineering, physics, and electronics through collaborative projects and research.&lt;/p&gt;&#xA;&lt;p&gt;Core Objectives: The club provides participants with hands-on engineering experience through project-based learning in aerospace-related technologies. Furthermore, through projects and science outreach, it aims to inspire more students to pursue engineering-related fields.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Welcome to Our New Updates Section</title>
-      <link>http://localhost:1313/updates/101-welcome/</link>
-      <pubDate>Fri, 12 Sep 2025 13:35:55 -0500</pubDate>
-      <guid>http://localhost:1313/updates/101-welcome/</guid>
-      <description>We&amp;rsquo;re excited to introduce our new Updates section! This is where we&amp;rsquo;ll be sharing the latest news, announcements, and developments from our team.</description>
-    </item>
+    <atom:link href="http://localhost:1313/reference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>http://localhost:1313/reference/construction.excalidraw/</link>
