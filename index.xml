@@ -16,13 +16,6 @@
       <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/klvweb.png&#34; alt=&#34;Kelvin Aerospace Lab Logo&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-us&#34;&gt;About Us&lt;/h2&gt;&#xA;&lt;p&gt;Kelvin Aerospace Lab (KAL) is a non-profit student-led organization founded in September 2025. We are committed to providing high school students with real-world hands-on engineering experience while helping to expand STEM education.&lt;/p&gt;&#xA;&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Engineering Innovation&lt;/strong&gt;: We develop liquid rocket propulsion systems for education and competition, giving students experience with theory, design, simulation, manufacturing, and testing.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;STEM Accessibility&lt;/strong&gt;: We support schools lacking STEM programs through equipment donations, open-source software tools, particularly for underfunded districts.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Kelvin Aerospace Lab White Paper</title>
-      <link>http://localhost:1313/whitepaper_framework/</link>
-      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/whitepaper_framework/</guid>
-      <description>&lt;h2 id=&#34;1-executive-summary&#34;&gt;1. EXECUTIVE SUMMARY&lt;/h2&gt;&#xA;&lt;p&gt;Kelvin Aerospace Lab (KAL) is a non-profit student-led organization founded in September 2025 with a dual mission: providing opportunities for students to participate in and gain real-world engineering experience through liquid rocket development, and advancing STEM accessibility in underserved communities.&lt;/p&gt;&#xA;&lt;p&gt;We believe that while robotics competitions offer valuable experience, they operate within established frameworks with predictable outcomes. KAL’s approach is fundamentally different. Development requires students to work with theory, design, simulation, control, manufacturing, and testing, where solutions are not predetermined. The level of complexity mirrors what engineers face in industry, providing students with irreplaceable experience in problem-solving.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Meeting #07</title>
       <link>http://localhost:1313/meetings/07/</link>
       <pubDate>Tue, 28 Oct 2025 00:00:00 +0000</pubDate>
