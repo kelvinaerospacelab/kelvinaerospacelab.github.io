@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Meeting #02" />
+  <meta property="og:title" content="" />
   <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
-  <meta property="og:url" content="http://localhost:1313/meetings/02/" />
+  <meta property="og:url" content="http://localhost:1313/reference/what-is-kelvin-aero/" />
   <meta property="og:site_name" content="Kelvin Aerospace Lab" />
   
     
@@ -15,14 +15,14 @@
   
   <meta property="og:locale" content="en" />
   
-    <meta property="article:published_time" content="2025-09-16T00:00:00Z" />
-    <meta property="article:modified_time" content="2025-09-16T00:00:00Z" />
+    <meta property="article:published_time" content="0001-01-01T00:00:00Z" />
+    <meta property="article:modified_time" content="0001-01-01T00:00:00Z" />
     
   
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Meeting #02" />
+  <meta name="twitter:title" content="" />
   <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
   
     
@@ -36,7 +36,7 @@
       <meta name="twitter:image" content="http://localhost:1313/images/klvweb.png" />
     
   
-  <title>Meeting #02</title>
+  <title></title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -92,14 +92,15 @@
 <link rel="stylesheet" href="/css/custom.min.css" media="screen" />
 </head>
 </head>
-  <body class="meetings"> <!-- preloader start -->
+  <body class="reference"> <!-- preloader start -->
 <div class="preloader">
   
   <img src="/images/preloader.gif" alt="preloader" />
   
 </div>
 <!-- preloader end --> 
-<section class="menu menu-fix" id="menu">
+
+  <section class="menu menu-fix" id="menu">
   <nav>
     
     <div class="menu-container">
@@ -311,189 +312,46 @@
 </script>
 
 
+  <div class="under-menu col-lg-8 col-md-10 col-12 mx-auto post-container">
+    <h1></h1>
+    <span class="date">Posted on: 1/1/0001</span>
+    <div class="body">
+      <p>KAL的定义和工作已经有了，这些是补充内容：虽然用中文描述，但是White paper本质上是英文的</p>
+<p>本质上KAL作为一个非盈利组织包含两大板块，工程制造部分，和类似一个慈善组织的部分。工程实践部分目前正在进行的是液体火箭发动机研发制造是我们的一个项目，这设涉及到很多学科，非常困难，是为了给予学生工程实践经验which在高中阶段是很稀有的事情。我们也不希望拘泥于书本，而是真实的跨学科整合的实践经验。这和机器人比赛什么的不同，有更大的挑战，更高的成本和更大的不确定度，并且目标也是浮动并且更为严苛的（后续会讲到）。我们希望这能帮助学生理解现实工程项目的复杂性，同时获取这样的经验。</p>
+<p>慈善组织部分工作是利用我们的工作和影响力，能够帮助到更多难以获得资金的小项目以及需要更多资金以支持Stem教育扩展的学校。通过捐款和技术支持帮助这些个人和组织能够在Stem领域有所进展，为学生提供更好的机会和开设更有意思的课程。这些帮助可能是资金也可能是设备，取决于我们能筹集到的资金数量和协调结果。</p>
+<hr>
+<p>这里补充说明一下我们是如何开始的，这段可能用不到，只是补充背景。
+Club在25年下半学期（9-15）成立，然后我们进行了基础会议，之后的一段时间构建了官网用于发布内容，并且设立了文档库以供学生了解火箭发动机是如何设计的。我们设置了Github组织和仓库用于发布代码和工具。我们设置了Focalboard用于项目管理和进度追踪，并使用Discord进行即时沟通。我们还设置了官方HTML邮件等内容。</p>
+<hr>
+<p>火箭发动机研制是工程实践第一部分的第一步，我们正在同时开发一个简单的基于冷气直喷的RCS，以及后续计划开发可变推力系统和TVC控制以允许发动机悬停在空中。对于这部分我们计划尝试使用神经网络取代传统PID，因为端到端神经网络的本就是为这种复杂场景设计的，你有无数input和有限output，并且能在虚拟环境中进行训练而无需很高的费用。</p>
+<p>当前的进展是
+我们3D打印了基础再生冷却模型用于理解结构
+我们打印了喷注器进行了水测试以了解液膜和针栓的特性
+我们完成了发动机的数值计算，使用CEA得出的数据计算结果和RPA的数据差别在5%以内，验证了计算结果的真实性，在此期间开发了自己的发动机计算软件用于自动化计算过程。
+进行了Ansys瞬态仿真模拟，喷管在目标压力下各项数值均符合预期。
+完成了测试台和控制系统的初步设计。
+我们完成了原型发动机的设计和PLA 3D打印以进行更多测试。</p>
+<p>第二步是对喷注器的混合测试和对发动机进行水压测试。这需要完成测试台和燃料系统开发。电子控制系统正在开发当中，我们从Arduino切换到了ESP32以应对复杂的传感器配置。</p>
+<p>然后进行冷流测试和喷注器点火，最后是完整发动机点火测试。</p>
+<p>完成这一目标后根据情况我们会继续优化发动机，提高效率并且尝试变推力功能开发。</p>
+<p>工程第二部分是进行推力控制，节流以及TVC系统开发。我们将先用PID进行虚拟测试，之后寻找神经网络方法。</p>
+<p>最终目标是将所有内容组合在一起完成稳定悬停。这将是最大的挑战。</p>
+<h2 id="如果一切进展顺利我们计划将目光投向动量轮和冷气rcs甚至双氧水rcs以弥补一开始精确控制方面的短板">如果一切进展顺利，我们计划将目光投向动量轮和冷气RCS（甚至双氧水RCS），以弥补一开始精确控制方面的短板。</h2>
+<p>我们理解目标的难度和复杂性，但是这样的挑战是我们想要的。我们计划在2027年上半年完成目标。</p>
+<hr>
+<p>慈善组织
+这是我们整体组成的第二部分，我们希望让真正的Stem教育被普及而不受到硬件和资金限制。因此希望能在这方面起到一定作用，向有需要的个人或群体提供设备或资金支持，包括/例如原住民学校等。这些群体在社会整体的Stem领域参与较低，反映了切实的资源不均问题。通过我们的行动，希望能够为改善这一现象出一份力，特别是在AI时代，一切的发展速度会更加日新月异，显示了这一行动的迫切和必要性。设备包括但不限于CNC，3D打印机，用于更新计算机设备，网络等。如果在工程实践中有有用的部件，设计或者服务，我们也乐于提供。慈善组织的资金将单独筹集，和工程开发相独立，以实现效益最大化。</p>
+<hr>
+<p>以上是综述，下面是对于目前具体的发动机的具体细节内容</p>
+<p>正在开发的发动机是气氧乙醇再生冷却+液膜冷却，挤压循环发动机（gas-fed）。数据参考report文件夹。查看 report 文件夹以获取数据。
+我们没有选择固体火箭发动机是因为固体发动机不符合我们获取工程实践经验的目标。固体火箭发动机或者火箭motor是一个更易于制造但是并不容易进行优化的东西，燃烧效果会因为火药装填，外壳，温湿度而变化，难以复制。并且对我们的跨学科整合的愿景起到的帮助较小。</p>
+<p>发动机完成了Ansys Fluent瞬态仿真，获取了数据现实发动机喷管和设计相符合。由于是第一台发动机，我们使用了更保守的LSTAR。由于小发动机的Heat flux实际上更极端，我们在再生冷却的基础上增加了19%的液膜冷却，这将保护发动机内壁防止熔化。发动机本体计划使用316L金属3D打印，并且当前所有部件都是实现了自支撑设计，因此打印时无需额外支撑。</p>
+<p>（有一些图和文件，例如瞬态仿真结果，前面提到的用于演示工作原理的再生冷却和喷注器模型，真正的发动机模型，基于CEA的燃烧效率统计分析，Rust写的数值计算软件在GitHub上，官网 文档网 项目追踪，发动机设计报告，测试台设计等）</p>
 
-
-<section class="header" id="meetings-hero">
-  <div class="hero-image">
-    
-    <img
-      class="d-none d-md-block"
-      src="/images/moon.jpg"
-      alt="background"
-    />
-    <img
-      class="d-md-none"
-      src="/images/moon.jpg"
-      alt="background"
-    />
-    
-  </div>
-  <div class="container">
-    <div class="row content">
-      <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 head-container">
-        <div class="head-holder">
-          <h1 class="introduction"><span class='title-kelvin'>MEETING</span> NOTES</h1>
-          
-          <div class="animated-text">
-            <strong class="cd-headline clip">
-              <span class="cd-words-wrapper">
-                
-                  
-                  <b class="is-visible">Meeting minutes and discussions</b>
-                  
-                
-                  
-                  <b>Team collaboration updates</b>
-                  
-                
-                  
-                  <b>Project progress tracking</b>
-                  
-                
-              </span>
-            </strong>
-          </div>
-          
-        </div>
-      </div>
     </div>
   </div>
-</section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      
-      const targetElement = document.querySelector('.meeting-content');
-      if (targetElement) {
-        const headerOffset = 250; 
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-        
-        setTimeout(() => {
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
-    });
-  </script>
-
-  <section class="about-me" id="meeting-content">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <article class="meeting-single">
-            <div class="text-center mb-5">
-              <h1 class="section-title">250916 - Meeting #02</h1>
-              <p class="text-muted">September 16, 2025</p>
-            </div>
-            
-            <div class="meeting-content">
-              <style>
-                .meeting-content img {
-                  max-width: 100%;
-                  height: auto;
-                  display: block;
-                  margin: 1.5rem auto;
-                  border-radius: 4px;
-                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-                }
-                
-                .meeting-content {
-                  overflow-wrap: break-word;
-                  word-wrap: break-word;
-                }
-                
-                .meeting-content p {
-                  margin-bottom: 1.5rem;
-                }
-              </style>
-              <h2 id="general-discussion">General Discussion</h2>
-<p>A follow-up meeting was held the day after the first meeting. The meeting focused on in-depth discussions around achievable short-, medium-, and long-term goals, and translated the objectives, division of labor, and toolchain established in the first meeting into a more specific roadmap and timeline.</p>
-<h4 id="roadmap-and-timeline">Roadmap and Timeline</h4>
-<p>The team has broken down long-term goals into a series of deliverable milestones, with approximate timeframes for follow-up tracking and evaluation:</p>
-<ol>
-<li>
-<p>Club Start &amp; Early Trial</p>
-<ul>
-<li>
-<p>Phase Timeline: 2024-Present (Ongoing)</p>
-</li>
-<li>
-<p>Goals and Content: Learn foundational skills, participate in and replicate relevant small-scale projects to gain experience. Emphasize theoretical learning and hands-on training to lay the foundation for subsequent prototypes.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Theoretical Learning, Popularization, and Prototyping</p>
-<ul>
-<li>
-<p>Phase Timeline: 2025 (Launch)</p>
-</li>
-<li>
-<p>Goals and Content: Plan and implement a minimum viable product (MVP), conduct small-scale combustion/nozzle/injector testing, and simultaneously conduct educational research and documentation to ensure knowledge archival.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Small Engine Improvement / RCS Attempt</p>
-<ul>
-<li>
-<p>Phase Time: 2025-2026</p>
-</li>
-<li>
-<p>Goal and Content: Based on MVP, improve component design (e.g., nozzles and pintle injectors) and conduct basic experiments with small-scale RCS (reaction control) or thrust vectoring control (TVC) to enhance understanding of system behavior.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Small-Medium Liquid Fuel Engines</p>
-<ul>
-<li>
-<p>Phase Time: 2026</p>
-</li>
-<li>
-<p>Goal and Content: Develop a more complete engine, integrating gas oxygen supply/ambient ethanol, regenerative cooling, and electric pump cycles, and gradually transition to more complex propulsion system design and manufacturing processes.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>TVC Control System Thrust Vectoring/Hover Control Implementation</p>
-<ul>
-<li>
-<p>Phase Time: 2026-2027</p>
-</li>
-<li>
-<p>Goal and Content: Demonstrate a prototype of hover and attitude control using PID and other control algorithms, integrating the propulsion system, sensors, and control loops to form a repeatable T&amp;C (test and control) solution.</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="technical--project-discussions">Technical &amp; Project Discussions</h2>
-<h4 id="aligning-tools-and-responsibilities">Aligning Tools and Responsibilities</h4>
-<p>Members discussed using Fusion 360/CREO for CAD modeling, SimScale/OpenFOAM and Ansys for simulation verification, and KiCad/Arduino for measurement, control, and data acquisition. These tools will be assigned to team tasks and milestones.</p>
-<h4 id="prototyping">Prototyping</h4>
-<p>The possibility of using sand casting for prototyping was discussed and will be investigated by the team. However, the drawbacks of this approach are that it requires post-processing on a lathe or CNC machine and does not allow for regenerative cooling.</p>
-<h2 id="next-step-continued-from-the-previous-meeting">Next Step (Continued from the previous meeting)</h2>
-<ul>
-<li>Investigate and research the software, hardware, and resources required to design, test, and manufacture liquid rocket engines.</li>
-<li>Improve project direction planning and specific cooperation methods, such as real-time collaboration on electronic design and CAD parts.</li>
-<li>Research the feasibility of the direction and prepare a report.</li>
-<li>Explore the possibilities of using sand casting method.</li>
-</ul>
-
-            </div>
-            
-            <div class="text-center mt-5">
-              <a href="/meetings/" class="btn btn-outline-primary">Back to Meetings</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section><div class="footer container text-center" id="contact">
+  <div class="footer container text-center" id="contact">
   <ul class="footer-icons list-inline">
     
       <li>
@@ -519,6 +377,7 @@
     © 2025 Kelvin Aerospace Lab. All rights reserved.
   </div>
 </div>
+
 <!-- JS Plugins --> 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
