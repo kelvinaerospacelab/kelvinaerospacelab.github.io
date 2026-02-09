@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Excalidraw on Kelvin Aerospace Lab</title>
-    <link>http://localhost:1313/tags/excalidraw/</link>
+    <link>http://localhost:7490/tags/excalidraw/</link>
     <description>Recent content in Excalidraw on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/tags/excalidraw/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:7490/tags/excalidraw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/reference/construction.excalidraw/</link>
+      <link>http://localhost:7490/reference/construction.excalidraw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reference/construction.excalidraw/</guid>
+      <guid>http://localhost:7490/reference/construction.excalidraw/</guid>
       <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;excalidraw-data&#34;&gt;Excalidraw Data&lt;/h1&gt;&#xA;&lt;h2 id=&#34;text-elements&#34;&gt;Text Elements&lt;/h2&gt;&#xA;&lt;p&gt;KAL ^uiwRTDpu&lt;/p&gt;&#xA;&lt;p&gt;Educational&#xA;Purpose ^LIDjOjTh&lt;/p&gt;&#xA;&lt;p&gt;Technological Innovation ^70322eNj&lt;/p&gt;&#xA;&lt;p&gt;Social Impact ^CDHkXNht&lt;/p&gt;&#xA;&lt;p&gt;Fundraising  ^sdhQ6CCl&lt;/p&gt;&#xA;&lt;p&gt;Kits/&#xA;Solutions ^F1FPFATR&lt;/p&gt;&#xA;&lt;p&gt;Enthusiasts ^FY0bldm8&lt;/p&gt;&#xA;&lt;p&gt;Sponsors ^QMkU9anu&lt;/p&gt;&#xA;&lt;p&gt;Donations ^cJow4hrV&lt;/p&gt;&#xA;&lt;p&gt;Parts&#xA;Suppliers ^pjZ4le82&lt;/p&gt;&#xA;&lt;p&gt;Companies ^yMKGveuV&lt;/p&gt;&#xA;&lt;p&gt;Government ^HcGL7I7e&lt;/p&gt;&#xA;&lt;p&gt;Alumni ^J2yFLOr6&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/reference/testbench.excalidraw/</link>
+      <link>http://localhost:7490/reference/testbench.excalidraw/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/reference/testbench.excalidraw/</guid>
+      <guid>http://localhost:7490/reference/testbench.excalidraw/</guid>
       <description>&lt;p&gt;==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: &amp;lsquo;Decompress current Excalidraw file&amp;rsquo;. For more info check in plugin settings under &amp;lsquo;Saving&amp;rsquo;&lt;/p&gt;&#xA;&lt;h1 id=&#34;excalidraw-data&#34;&gt;Excalidraw Data&lt;/h1&gt;&#xA;&lt;h2 id=&#34;text-elements&#34;&gt;Text Elements&lt;/h2&gt;&#xA;&lt;p&gt;Pressurized Gas Oxygen ^HZpNzEJY&lt;/p&gt;&#xA;&lt;p&gt;C2H5OH Ethanol ^tQZjHiX0&lt;/p&gt;&#xA;&lt;p&gt;Pressurized nitrogen ^dNCF0c7f&lt;/p&gt;&#xA;&lt;p&gt;Manometer ^Dmxkx2tK&lt;/p&gt;&#xA;&lt;p&gt;Electric valve/&#xA;MFC ^egCqXqxY&lt;/p&gt;&#xA;&lt;p&gt;Safety Valve ^tw4wMMV7&lt;/p&gt;&#xA;&lt;p&gt;Ethanol Path ^tB45pYf7&lt;/p&gt;&#xA;&lt;p&gt;GOX Path ^uGWyJaRk&lt;/p&gt;&#xA;&lt;p&gt;One-way valve ^hPugTvR1&lt;/p&gt;&#xA;&lt;p&gt;Flow meter ^lDzR0NL4&lt;/p&gt;</description>
     </item>
   </channel>

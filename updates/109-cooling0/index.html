@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
+  <meta charset="utf-8" />
+  <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Cooling: Concept and Regenerative Approach" />
+  <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
+  <meta property="og:url" content="http://localhost:7490/updates/109-cooling0/" />
+  <meta property="og:site_name" content="Kelvin Aerospace Lab" />
+  
+    
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
+    
+  
+  <meta property="og:locale" content="en" />
+  
+    <meta property="article:published_time" content="2025-12-09T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-12-09T00:00:00Z" />
+    
+  
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cooling: Concept and Regenerative Approach" />
+  <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
+  
+    
+  
+    
+  
+    
+  
+  
+    
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
+    
+  
+  <title>Cooling: Concept and Regenerative Approach</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment."
+  />
+  
+    <meta name="author" content="Felex" />
+  
+
+  <!-- plugins -->
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css" />
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;display=swap" />
+  
+    <link rel="stylesheet" href="/plugins/text-animation/text-animation.css" />
+  
+    <link rel="stylesheet" href="/plugins/hugrid/hugrid.css" />
+  
+
+  <!-- Main Stylesheet -->
+
+  
+  <link rel="stylesheet" href="/css/style.min.css" media="screen" />
+
+  <!--Favicon-->
+
+  
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
+  
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ABCDEFG123');
+    </script>
+  
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Head Partial --><!-- Custom CSS -->
+
+<link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
+</head>
+</head>
+  <body class="updates"> <!-- preloader start -->
+<div class="preloader">
+  
+  <img src="/images/preloader.gif" alt="preloader" />
+  
+</div>
+<!-- preloader end --> 
+<section class="menu menu-fix" id="menu">
+  <nav>
+    
+    <div class="menu-container">
+      <div class="desktop-menu-logo">
+        <a href="/">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="/images/logo.svg"
+            alt="Kelvin Aerospace Lab"
+            id="desktop-logo"
+          />
+          <img
+            class="img-fluid d-md-none"
+            src="/images/logo-dark.svg"
+            alt="Kelvin Aerospace Lab"
+            id="mobile-logo"
+            style="display: none;"
+          />
+        </a>
+      </div>
+      <ul class="desktop-menu list-inline mb-0" id="desktop-menu">
+        
+        <li class="menu-item hvr-underline-from-left 1">
+          <a href="/#about">Home</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 2">
+          <a href="/intro/">About Us</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 3">
+          <a href="/updates/">Updates</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 4">
+          <a href="/meetings/">Meetings</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 5">
+          <a href="https://docs.kelvinaero.org">Documents</a>
+        </li>
+        
+      </ul>
+      
+      <div class="mobile-menu">
+        <div class="mobile-menu-nav">
+          <a class="menu-link">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <div class="mobile-menu-logo">
+          <a href="/">
+            <img
+              class="img-fluid"
+              src="/images/logo-dark.svg"
+              alt="Kelvin Aerospace Lab"
+              id="mobile-menu-logo"
+              style="height: 50px;"
+            />
+          </a>
+        </div>
+        <div class="menu-slider">
+          <nav>
+            <ul class="mobile-menu-list">
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/#about">Home</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/intro/">About Us</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/updates/">Updates</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/meetings/">Meetings</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="https://docs.kelvinaero.org">Documents</a>
+              </li>
+              
+            </ul>
+            <ul class="mobile-menu-icons list-inline mx-auto">
+              
+              <li>
+                <a href="https://github.com/kelvinaerospacelab">
+                  
+                    <i class="fab fa-github fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="mailto:kelvinaero@proton.me">
+                  
+                    <i class="fas fa-envelope fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="">
+                  
+                    <i class="fab fa-google-classroom fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<script>
+  
+  (function() {
+    
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) return;
+    
+    const menu = document.getElementById('menu');
+    const menuContainer = document.querySelector('.menu-container');
+    const desktopLogo = document.getElementById('desktop-logo');
+    
+    if (!menu || !menuContainer) return;
+    
+    
+    const lightLogoSrc = desktopLogo ? desktopLogo.getAttribute('src') : '';
+    
+    const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+    
+    
+    const heroHeight = window.innerHeight;
+    
+    function updateMenuOpacity() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      
+      
+      let opacity = Math.min(scrollY / heroHeight, 1);
+      
+      
+      if (opacity === 0) {
+        
+        menuContainer.style.background = 'transparent';
+        menuContainer.classList.remove('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = lightLogoSrc;
+        }
+      } else {
+        
+        menuContainer.style.background = `rgba(255, 255, 255, ${opacity})`;
+        menuContainer.classList.add('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = darkLogoSrc;
+        }
+      }
+      
+      
+      if (scrollY > 10) {
+        menuContainer.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${opacity * 0.1})`;
+      } else {
+        menuContainer.style.boxShadow = 'none';
+      }
+    }
+    
+    
+    updateMenuOpacity();
+    
+    
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateMenuOpacity();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    
+    window.addEventListener('resize', updateMenuOpacity);
+  })();
+  
+  
+  (function() {
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) {
+      const desktopLogo = document.getElementById('desktop-logo');
+      if (desktopLogo) {
+        const lightLogoSrc = desktopLogo.getAttribute('src');
+        const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+        desktopLogo.src = darkLogoSrc;
+      }
+    }
+  })();
+</script>
+<section class="about-me" id="update-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <article class="update-single">
+            <div class="text-center mb-5">
+              <h1 class="section-title">Cooling: Concept and Regenerative Approach</h1>
+              <p class="text-muted">December 9, 2025</p>
+            </div>
+            
+            <div class="update-content">
+              <style>
+                .update-content img {
+                  max-width: 100%;
+                  height: auto;
+                  display: block;
+                  margin: 1.5rem auto;
+                  border-radius: 4px;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                
+                .update-content {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                }
+                
+                .update-content p {
+                  margin-bottom: 1.5rem;
+                }
+              </style>
+              <p>Combustion temperatures in rocket chambers exceed 3000 K, while aluminum melts at 930 K, stainless steel loses strength above 1000 K, and copper alloys fail around 1300–1500 K. Without cooling, the chamber throat would melt within seconds.</p>
+<p>Even refractory metals like tungsten (melting point 3700 K) soften and oxidize under sustained exposure. Therefore we can conclude active cooling is mandatory for any practical engine.</p>
+<h2 id="three-cooling-approaches">Three Cooling Approaches</h2>
+<p>In his book <em>Rocket Propulsion Elements</em>, Sutton introduces several main methods.</p>
+<h3 id="ablative-cooling">Ablative Cooling</h3>
+<p>Generally speaking, this is the cheapest and simplest method, but the downside is that you can&rsquo;t quickly reuse the engine. A sacrificial liner (carbon composite, phenolic) chars and erodes, carrying heat away through mass loss. The disadvantages are material is consumable and adds inert mass. The nozzle profile also changes over time, which causing change of Ae/At. This approach is used in short-duration solid rockets and tactical systems where burn duration is limited.</p>
+<h3 id="radiative-cooling">Radiative Cooling</h3>
+<p>This is another form of passive cooling. If the engine is exposed to the elements, some heat will inevitably dissipate through radiation. The chamber wall runs hot (1500–2000 K) and radiates heat away. High-efficiency radiative cooling requires refractory materials (like niobium, molybdenum) and high-emissivity coatings. However, it is only viable for low-thrust, low-pressure engines with favorable surface-area-to-power ratios. Some upper stages use this method.</p>
+<h3 id="regenerative-cooling">Regenerative Cooling</h3>
+<p>Propellant flows through channels in the chamber wall, absorbing heat before injection. The absorbed heat doesn&rsquo;t escape. These heat are come from previous propellant flows, and preheats the propellant, slightly boosting $I_{sp}$. This is the standard approach for medium-to-high thrust liquid engines.</p>
+<h2 id="cooling-jacket-configurations">Cooling Jacket Configurations</h2>
+<p><img src="/images/updates/cooling/B1.png" alt="Cooling Jacket Configurations"></p>
+<p><strong>Corrugated Sheet (top)</strong>: A thin corrugated metal layer sits between inner and outer walls, soldered together in a furnace under external pressure. This design was used extensively in Soviet/Russian engines. It is suitable for mild-to-moderate heat flux zones.</p>
+<p><strong>Milled Slot (second)</strong>: Grooves are machined into a thick copper alloy inner wall. The grooves are filled with wax, then an outer wall is electroplated (typically nickel) to enclose the channels. Finally, the wax is melted out. This design handles the highest heat flux and is standard for throat regions.</p>
+<p><strong>Tubular (third)</strong>: Round tubes are shaped to the chamber contour, then formed into rectangular cross-sections and brazed together with an outer structural shell. This construction was used extensively in US engines like the F-1 and RS-25. It is suitable for intermediate-to-high heat flux.</p>
+<p><strong>Corrugated Outer Wall (fourth)</strong>: This is the simplest and often lightest configuration. It is used where heat transfer is modest, such as the nozzle exit or upstream combustor regions.</p>
+<p><strong>Welded Construction (bottom)</strong>: Made of stainless steel, this design allows higher wall temperatures than brazed constructions. It has been used in nozzles designed and built in Europe.</p>
+<p>Channel depth and width vary with axial location. The throat region has the smallest total cross-sectional area, which forces the highest coolant velocity exactly where heat flux peaks. Often, two or three different jacket types are combined in one chamber: milled slots at the throat, tubular or corrugated elsewhere.</p>
+<p>Today metal 3D printing technology has now changed that. We are able to design regenerated cooling pipes of almost any shape and bend, which improves both flexibility and performance.</p>
+<h2 id="materials-and-failure-modes">Materials and Failure Modes</h2>
+<p>Material selection depends on propellants, maximum wall temperature, heat transfer intensity, and duty cycle. Table 8-3 (Sutton, p. 283) lists typical choices:</p>
+<p><img src="/images/updates/cooling/B2.png" alt="Material Selection"></p>
+<p>For high-performance regenerative cooling, high thermal conductivity combined with thin walls reduces thermal stress. Copper conducts heat excellently and resists oxidation in fuel-rich atmospheres. However, pure copper lacks high-temperature strength, so inner walls typically use copper alloys with small additions of zirconium, silver, or silicon. These maintain near-copper conductivity while improving strength. This approach is common with LOX/LH₂ engines below mixture ratio 6.0.</p>
+<p>Radiation-cooled systems use different materials. Carbon can survive in reducing (fuel-rich) atmospheres up to ~3300 K. Small storable-propellant thrusters use niobium with disilicide coating (up to 1120 K) or rhenium with iridium coating (up to 2300 K). Tungsten, molybdenum, alumina, and tantalum have been tried but face manufacturing difficulties, cracking, hydrogen embrittlement, or oxidation. Hydrazine monopropellant thrusters typically use high-temperature copper-nickel alloys or stainless steel for radiation-cooled walls.</p>
+<p>Failure modes are predictable but difficult to prevent entirely. The hot wall bulges on the gas side, and cracks eventually open. During firing, thermal strain at the hot surface exceeds the material&rsquo;s yield point, causing permanent compressive deformation. After cooldown, residual tension appears. Repeated cycles accumulate plastic strain until cracks form. Eventually these cracks penetrate through the wall, leaking coolant into the chamber. At that point, the thrust chamber fails. Predictably, this will also be a problem for ours, and almost all reusable liquid rocket engines. It determines the number of times they can be safely reused. According to Sutton&rsquo;s description, useful life is defined as the maximum number of firings before such leakage occurs. Prediction is complex. For small thrusters with many pulses, valve seat fatigue can also limit life, and the storage life of soft components (O-rings, gaskets) may be the actual constraint.</p>
+<h2 id="coolant-selection">Coolant Selection</h2>
+<p>Fuel is typically preferred as the coolant for several reasons. First, fuel has higher specific heat capacity than oxidizers—especially hydrogen, which has ~14 kJ/kg·K. Second, fuel leaks are less dangerous than oxidizer leaks; they won&rsquo;t spontaneously ignite with the structure. Third, preheating the fuel aids vaporization and combustion.</p>
+<p>Liquid hydrogen is the ideal regenerative coolant due to its very high heat capacity, low density (which forces high velocity and thus high convection), and lack of coking or thermal decomposition. Hydrocarbons like RP-1 or ethanol also work but risk thermal cracking at hot walls, which deposits carbon that blocks channels and degrades heat transfer.</p>
+<h2 id="design-constraints">Design Constraints</h2>
+<p>The throat region demands the smallest channel spacing and highest coolant velocity. If the coolant reaches saturation temperature, vapor pockets form—heat transfer collapses, and burnthrough follows quickly. The wall must withstand a steep thermal gradient (hot inside, cold outside) without cracking. Narrow channels create high pressure drop, which requires stronger pumps or higher pressure (if using gas-fed).</p>
+<p>We will use RPA for this part of calculation.</p>
+<hr>
+<p><strong>References:</strong></p>
+<ul>
+<li>Sutton, G.P., &amp; Biblarz, O. (2017). <em>Rocket Propulsion Elements</em> (8th ed.). Wiley. (Ch. 8, pp. 271–311)</li>
+<li>Huzel, D.K., &amp; Huang, D.H. (1992). <em>Modern Engineering for Design of Liquid-Propellant Rocket Engines</em>. AIAA.</li>
+</ul>
+
+            </div>
+            
+            <div class="text-center mt-5">
+              <a href="/updates/" class="btn btn-outline-primary">Back to Updates</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section><div class="footer container text-center" id="contact">
+  <ul class="footer-icons list-inline">
+    
+      <li>
+        <a href="https://github.com/kelvinaerospacelab" target="_blank" rel="noreferrer"
+          ><i class="fab fa-github footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+      <li>
+        <a href="mailto:kelvinaero@proton.me" target="_blank" rel="noreferrer"
+          ><i class="fas fa-envelope footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+      <li>
+        <a href="" target="_blank" rel="noreferrer"
+          ><i class="fab fa-google-classroom footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+  </ul>
+  <div class="credit">
+    © 2025 Kelvin Aerospace Lab. All rights reserved.
+  </div>
+</div>
+<!-- JS Plugins --> 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+<script src="/plugins/text-animation/text-animation.js"></script>
+
+<script src="/plugins/hugrid/hugrid.min.js"></script>
+ <!-- Main Scripts --> 
+<script src="/js/script.min.js"></script>
+
+<script src="/js/hugrid.custom.min.js"></script>
+</body>
+</html>

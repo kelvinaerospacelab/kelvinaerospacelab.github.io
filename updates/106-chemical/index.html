@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
+  <meta charset="utf-8" />
+  <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Chemical Analysis" />
+  <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
+  <meta property="og:url" content="http://localhost:7490/updates/106-chemical/" />
+  <meta property="og:site_name" content="Kelvin Aerospace Lab" />
+  
+    
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
+    
+  
+  <meta property="og:locale" content="en" />
+  
+    <meta property="article:published_time" content="2025-11-02T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-11-02T00:00:00Z" />
+    
+  
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chemical Analysis" />
+  <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
+  
+    
+  
+    
+  
+    
+  
+  
+    
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
+    
+  
+  <title>Chemical Analysis</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment."
+  />
+  
+    <meta name="author" content="Felex" />
+  
+
+  <!-- plugins -->
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css" />
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;display=swap" />
+  
+    <link rel="stylesheet" href="/plugins/text-animation/text-animation.css" />
+  
+    <link rel="stylesheet" href="/plugins/hugrid/hugrid.css" />
+  
+
+  <!-- Main Stylesheet -->
+
+  
+  <link rel="stylesheet" href="/css/style.min.css" media="screen" />
+
+  <!--Favicon-->
+
+  
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
+  
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ABCDEFG123');
+    </script>
+  
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Head Partial --><!-- Custom CSS -->
+
+<link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
+</head>
+</head>
+  <body class="updates"> <!-- preloader start -->
+<div class="preloader">
+  
+  <img src="/images/preloader.gif" alt="preloader" />
+  
+</div>
+<!-- preloader end --> 
+<section class="menu menu-fix" id="menu">
+  <nav>
+    
+    <div class="menu-container">
+      <div class="desktop-menu-logo">
+        <a href="/">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="/images/logo.svg"
+            alt="Kelvin Aerospace Lab"
+            id="desktop-logo"
+          />
+          <img
+            class="img-fluid d-md-none"
+            src="/images/logo-dark.svg"
+            alt="Kelvin Aerospace Lab"
+            id="mobile-logo"
+            style="display: none;"
+          />
+        </a>
+      </div>
+      <ul class="desktop-menu list-inline mb-0" id="desktop-menu">
+        
+        <li class="menu-item hvr-underline-from-left 1">
+          <a href="/#about">Home</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 2">
+          <a href="/intro/">About Us</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 3">
+          <a href="/updates/">Updates</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 4">
+          <a href="/meetings/">Meetings</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 5">
+          <a href="https://docs.kelvinaero.org">Documents</a>
+        </li>
+        
+      </ul>
+      
+      <div class="mobile-menu">
+        <div class="mobile-menu-nav">
+          <a class="menu-link">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <div class="mobile-menu-logo">
+          <a href="/">
+            <img
+              class="img-fluid"
+              src="/images/logo-dark.svg"
+              alt="Kelvin Aerospace Lab"
+              id="mobile-menu-logo"
+              style="height: 50px;"
+            />
+          </a>
+        </div>
+        <div class="menu-slider">
+          <nav>
+            <ul class="mobile-menu-list">
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/#about">Home</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/intro/">About Us</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/updates/">Updates</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/meetings/">Meetings</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="https://docs.kelvinaero.org">Documents</a>
+              </li>
+              
+            </ul>
+            <ul class="mobile-menu-icons list-inline mx-auto">
+              
+              <li>
+                <a href="https://github.com/kelvinaerospacelab">
+                  
+                    <i class="fab fa-github fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="mailto:kelvinaero@proton.me">
+                  
+                    <i class="fas fa-envelope fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="">
+                  
+                    <i class="fab fa-google-classroom fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<script>
+  
+  (function() {
+    
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) return;
+    
+    const menu = document.getElementById('menu');
+    const menuContainer = document.querySelector('.menu-container');
+    const desktopLogo = document.getElementById('desktop-logo');
+    
+    if (!menu || !menuContainer) return;
+    
+    
+    const lightLogoSrc = desktopLogo ? desktopLogo.getAttribute('src') : '';
+    
+    const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+    
+    
+    const heroHeight = window.innerHeight;
+    
+    function updateMenuOpacity() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      
+      
+      let opacity = Math.min(scrollY / heroHeight, 1);
+      
+      
+      if (opacity === 0) {
+        
+        menuContainer.style.background = 'transparent';
+        menuContainer.classList.remove('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = lightLogoSrc;
+        }
+      } else {
+        
+        menuContainer.style.background = `rgba(255, 255, 255, ${opacity})`;
+        menuContainer.classList.add('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = darkLogoSrc;
+        }
+      }
+      
+      
+      if (scrollY > 10) {
+        menuContainer.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${opacity * 0.1})`;
+      } else {
+        menuContainer.style.boxShadow = 'none';
+      }
+    }
+    
+    
+    updateMenuOpacity();
+    
+    
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateMenuOpacity();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    
+    window.addEventListener('resize', updateMenuOpacity);
+  })();
+  
+  
+  (function() {
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) {
+      const desktopLogo = document.getElementById('desktop-logo');
+      if (desktopLogo) {
+        const lightLogoSrc = desktopLogo.getAttribute('src');
+        const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+        desktopLogo.src = darkLogoSrc;
+      }
+    }
+  })();
+</script>
+<section class="about-me" id="update-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <article class="update-single">
+            <div class="text-center mb-5">
+              <h1 class="section-title">Chemical Analysis</h1>
+              <p class="text-muted">November 2, 2025</p>
+            </div>
+            
+            <div class="update-content">
+              <style>
+                .update-content img {
+                  max-width: 100%;
+                  height: auto;
+                  display: block;
+                  margin: 1.5rem auto;
+                  border-radius: 4px;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                
+                .update-content {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                }
+                
+                .update-content p {
+                  margin-bottom: 1.5rem;
+                }
+              </style>
+              <p>This update summarizes how we choose mixture ratio, thrust, and chamber pressure for a small GOX/ethanol engine.</p>
+<h2 id="mixture-ratio">Mixture Ratio</h2>
+<p>The mixture ratio is defined as</p>
+<p>$$r = \frac{\dot{m}_o}{\dot{m}_f}$$</p>
+<p>In <em>Rocket Propulsion Elements</em> (8th ed., Ch. 5), the thermodynamic property tables underpin why mixture ratio matters: lower molecular weight products generally raise $I_s$ and $c^*$. This helps explain why the optimal mixture ratio is often fuel-rich rather than stoichiometric. Sutton &amp; Biblarz show this explicitly for LOX/LH2, where the optimal ratio is around 4.5-6.0 rather than the stoichiometric 8.0, because fuel-rich exhaust has lower molecular weight and therefore higher $I_s$.</p>
+<p><img src="/images/updates/elements.png" alt="Rocket Propulsion Elements Table 5-1"></p>
+<p>Today we use NASA CEA software to study combustion mixtures. See <a href="https://cearun.grc.nasa.gov/">https://cearun.grc.nasa.gov/</a> for the official CEA web interface.</p>
+<h2 id="how-we-choose-thrust-and-chamber-pressure">How We Choose Thrust and Chamber Pressure</h2>
+<p>The thrust equation anchors the sizing loop:</p>
+<p>$$F = C_F \cdot p_c \cdot A_t$$</p>
+<p>This equation has a recursive aspect, so when we do not yet have a vehicle-level target, we typically start from thrust and chamber pressure&hellip; With those two values, CEA lets us compute $A_e/A_t$, $c^*$, and related performance quantities for a chosen mixture ratio, which then gives a consistent throat size.</p>
+<p>Where $C_F$ depends on expansion ratio $A_e/A_t$, gas properties, and ambient pressure. Based on the materials, the recommended method is roughly as follows:</p>
+<ol>
+<li>Pick a target thrust range based on test goals and safety limits.</li>
+<li>Choose a reasonable chamber pressure $p_c$ based on hardware and cooling limits.</li>
+<li>Select an expansion ratio for sea-level or near-sea-level testing.</li>
+<li>Use $F = C_F p_c A_t$ to compute throat area $A_t$.</li>
+<li>Check geometry, mass flow, and cooling feasibility, then iterate.</li>
+</ol>
+<p>This is the same logic as Sutton’s method, but adapted for a ground-test engine where geometry and cooling drive early constraints. These can now be achieved through CEA.</p>
+<h2 id="cea-results-for-goxethanol">CEA Results for GOX/Ethanol</h2>
+<p>We ran NASA CEA for GOX/ethanol to map temperature, $I_s$, and $c^*$ versus O/F for several chamber pressures. Selected plots are included below.</p>
+<p>For reference, the idealized overall reaction can be written as:</p>
+<p>$$C_2H_5OH + 3O_2 \rightarrow 2CO_2 + 3H_2O$$</p>
+<h3 id="graph-1-chamber--throat--exit-temperature-vs-of">Graph 1: Chamber / Throat / Exit Temperature vs O/F</h3>
+
+
+<div class="chart-container" style="position: relative; width: 100%; max-width: 1000px; height: 420px; margin: 1.5rem auto;">
+  <canvas id="chart-9421646e29608db41303706355969a4e-0"></canvas>
+  <script type="application/x-chart-yaml" data-chart-target="chart-9421646e29608db41303706355969a4e-0">
+type: line
+labels: [1.2, 1.4, 1.6, 1.8, 2.0, 2.2]
+series:
+  - title: Chamber T - 10 bar
+    data: [2858.66, 3098.07, 3200.98, 3238.15, 3246.03, 3239.59]
+    color: #e74c3c88
+  - title: Chamber T - 20 bar
+    data: [2887.60, 3157.88, 3279.40, 3323.68, 3333.36, 3326.38]
+    color: #e74c3c
+    lineWidth: 2.5
+  - title: Chamber T - 30 bar
+    data: [2902.22, 3190.97, 3324.97, 3374.20, 3385.17, 3377.88]
+    color: #c0392b
+    lineWidth: 3.5
+  - title: Throat T - 10 bar
+    data: [2641.98, 2928.11, 3055.81, 3101.38, 3112.04, 3106.41]
+    color: #f39c1288
+  - title: Throat T - 20 bar
+    data: [2657.01, 2972.63, 3123.05, 3177.51, 3190.47, 3184.39]
+    color: #f39c12
+    lineWidth: 2.5
+  - title: Throat T - 30 bar
+    data: [2664.18, 2996.32, 3161.60, 3222.26, 3236.84, 3230.51]
+    color: #d35400
+    lineWidth: 3.5
+  - title: Exit T - 10 bar
+    data: [1985.83, 2360.75, 2611.87, 2707.17, 2730.71, 2727.06]
+    color: #9b59b688
+  - title: Exit T - 20 bar
+    data: [1748.88, 2118.88, 2441.17, 2604.84, 2645.11, 2641.94]
+    color: #9b59b6
+    lineWidth: 2.5
+  - title: Exit T - 30 bar
+    data: [1621.58, 1976.94, 2316.45, 2533.73, 2590.79, 2587.96]
+    color: #8e44ad
+    lineWidth: 3.5
+width: 95%
+xTitle: Mixture Ratio O/F
+yTitle: Temperature (K)
+fill: false
+beginAtZero: false
+tension: 0.3
+legend: true
+pointRadius: 3
+  </script>
+</div>
+<h3 id="graph-2-ivac--isp--c-vs-of">Graph 2: Ivac / Isp / c* vs O/F</h3>
+
+
+<div class="chart-container" style="position: relative; width: 100%; max-width: 1000px; height: 420px; margin: 1.5rem auto;">
+  <canvas id="chart-9421646e29608db41303706355969a4e-1"></canvas>
+  <script type="application/x-chart-yaml" data-chart-target="chart-9421646e29608db41303706355969a4e-1">
+type: line
+labels: [1.2, 1.4, 1.6, 1.8, 2.0, 2.2]
+series:
+  - title: Ivac @ Exit - 10 bar
+    data: [2522.4, 2602.1, 2621.6, 2601.9, 2569.7, 2535.2]
+    color: #3498db88
+  - title: Ivac @ Exit - 20 bar
+    data: [2680.7, 2780.4, 2823.4, 2815.3, 2783.5, 2746.3]
+    color: #3498db
+    lineWidth: 2.5
+  - title: Ivac @ Exit - 30 bar
+    data: [2761.7, 2871.0, 2926.6, 2929.0, 2898.8, 2860.0]
+    color: #2980b9
+    lineWidth: 3.5
+    pointStyle: circle
+  - title: Isp @ Exit - 10 bar
+    data: [2142.0, 2196.2, 2201.5, 2181.0, 2153.1, 2124.0]
+    color: #2ecc7188
+    borderDash: [4, 3]
+  - title: Isp @ Exit - 20 bar
+    data: [2379.2, 2455.7, 2479.1, 2464.1, 2434.4, 2401.7]
+    color: #2ecc71
+    borderDash: [4, 3]
+    lineWidth: 2.5
+  - title: Isp @ Exit - 30 bar
+    data: [2495.2, 2583.1, 2618.5, 2609.7, 2580.1, 2545.4]
+    color: #27ae60
+    borderDash: [4, 3]
+    lineWidth: 3.5
+  - title: c* - 10 bar
+    data: [1692.3, 1726.6, 1723.1, 1704.6, 1682.2, 1659.4]
+    color: #2c3e5088
+  - title: c* - 20 bar
+    data: [1694.7, 1734.7, 1735.3, 1718.1, 1695.8, 1672.8]
+    color: #2c3e50
+    lineWidth: 2.5
+  - title: c* - 30 bar
+    data: [1695.9, 1738.8, 1742.1, 1725.8, 1703.7, 1680.6]
+    color: #34495e
+    lineWidth: 3.5
+width: 95%
+xTitle: Mixture Ratio O/F
+yTitle: Specific Impulse / c* (m/s)
+fill: false
+beginAtZero: false
+tension: 0.25
+legend: true
+pointRadius: 3
+  </script>
+</div>
+<h3 id="graph-3-cf--aeat--exit-mach-vs-of">Graph 3: CF / Ae/At / Exit Mach vs O/F</h3>
+
+
+<div class="chart-container" style="position: relative; width: 100%; max-width: 1000px; height: 420px; margin: 1.5rem auto;">
+  <canvas id="chart-9421646e29608db41303706355969a4e-2"></canvas>
+  <script type="application/x-chart-yaml" data-chart-target="chart-9421646e29608db41303706355969a4e-2">
+type: line
+labels: [1.2, 1.4, 1.6, 1.8, 2.0, 2.2]
+series:
+  - title: CF @ Exit - 10 bar
+    data: [1.2657, 1.2720, 1.2776, 1.2795, 1.2799, 1.2800]
+    color: #e67e2288
+  - title: CF @ Exit - 20 bar
+    data: [1.4039, 1.4156, 1.4286, 1.4342, 1.4356, 1.4357]
+    color: #e67e22
+    lineWidth: 2.5
+  - title: CF @ Exit - 30 bar
+    data: [1.4713, 1.4856, 1.5031, 1.5122, 1.5144, 1.5146]
+    color: #d35400
+    lineWidth: 3.5
+  - title: Ae/At - 10 bar
+    data: [2.248, 2.3506, 2.4379, 2.4692, 2.4770, 2.4781]
+    color: #27ae6088
+  - title: Ae/At - 20 bar
+    data: [3.5585, 3.7442, 3.9686, 4.0887, 4.1170, 4.1197]
+    color: #27ae60
+    lineWidth: 2.5
+  - title: Ae/At - 30 bar
+    data: [4.7159, 4.9667, 5.3061, 5.5503, 5.6119, 5.6162]
+    color: #1e8449
+    lineWidth: 3.5
+  - title: Exit Mach - 10 bar
+    data: [2.149, 2.144, 2.155, 2.161, 2.162, 2.162]
+    color: #3498db88
+    borderDash: [3, 2]
+  - title: Exit Mach - 20 bar
+    data: [2.537, 2.511, 2.499, 2.509, 2.511, 2.511]
+    color: #3498db
+    borderDash: [3, 2]
+    lineWidth: 2.5
+  - title: Exit Mach - 30 bar
+    data: [2.761, 2.727, 2.727, 2.701, 2.701, 2.704]
+    color: #2980b9
+    borderDash: [3, 2]
+    lineWidth: 3.5
+width: 95%
+xTitle: Mixture Ratio O/F
+yTitle: Values (CF / Ae/At / Mach)
+fill: false
+beginAtZero: false
+tension: 0.2
+legend: true
+pointRadius: 3
+  </script>
+</div>
+<p>From these curves, we are able to find that:</p>
+<ul>
+<li>Within the tested range, the best $I_s$ occurs on the oxidizer-rich side rather than at the lowest O/F.</li>
+<li>Chamber temperature rises quickly as O/F increases.</li>
+<li>Higher chamber pressure improves $I_s$ and $c^*$, but with diminishing returns. The gain from 20 to 30 bar is smaller than from 10 to 20 bar.</li>
+<li>As O/F continues to increase past the optimum, performance gains flatten and then begin to decline.</li>
+</ul>
+<p>Therefore, we can deduce that achieving high efficiency in the combustion of ethanol and oxygen mixtures would pose a very stringent challenge to cooling. However, increasing the amount of ethanol (the regenerated coolant must be liquid) would reduce the O/F ratio, leading to a significant decrease in efficiency. Therefore, a balance must be found, and the ideal value is likely between 1.2 and 1.6.</p>
+<hr>
+<p><strong>References:</strong></p>
+<ul>
+<li>Sutton, G.P., &amp; Biblarz, O. (2017). <em>Rocket Propulsion Elements</em> (8th ed.). Wiley. (Ch. 5, Figs. 5-1, 5-4; Table 5-5; Ch. 2-3, 6)</li>
+</ul>
+
+            </div>
+            
+            <div class="text-center mt-5">
+              <a href="/updates/" class="btn btn-outline-primary">Back to Updates</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section><div class="footer container text-center" id="contact">
+  <ul class="footer-icons list-inline">
+    
+      <li>
+        <a href="https://github.com/kelvinaerospacelab" target="_blank" rel="noreferrer"
+          ><i class="fab fa-github footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+      <li>
+        <a href="mailto:kelvinaero@proton.me" target="_blank" rel="noreferrer"
+          ><i class="fas fa-envelope footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+      <li>
+        <a href="" target="_blank" rel="noreferrer"
+          ><i class="fab fa-google-classroom footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+  </ul>
+  <div class="credit">
+    © 2025 Kelvin Aerospace Lab. All rights reserved.
+  </div>
+</div>
+<!-- JS Plugins --> 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+<script src="/plugins/text-animation/text-animation.js"></script>
+
+<script src="/plugins/hugrid/hugrid.min.js"></script>
+ <!-- Main Scripts --> 
+<script src="/js/script.min.js"></script>
+
+<script src="/js/hugrid.custom.min.js"></script>
+</body>
+</html>

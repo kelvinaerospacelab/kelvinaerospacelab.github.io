@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
+  <meta charset="utf-8" />
+  <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Regenerative Cooling Optimization #1" />
+  <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
+  <meta property="og:url" content="http://localhost:7490/updates/111-cooling1/" />
+  <meta property="og:site_name" content="Kelvin Aerospace Lab" />
+  
+    
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
+    
+  
+  <meta property="og:locale" content="en" />
+  
+    <meta property="article:published_time" content="2025-12-28T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-12-28T00:00:00Z" />
+    
+  
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Regenerative Cooling Optimization #1" />
+  <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
+  
+    
+  
+    
+  
+    
+  
+  
+    
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
+    
+  
+  <title>Regenerative Cooling Optimization #1</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment."
+  />
+  
+    <meta name="author" content="Felex" />
+  
+
+  <!-- plugins -->
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css" />
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&amp;display=swap" />
+  
+    <link rel="stylesheet" href="/plugins/text-animation/text-animation.css" />
+  
+    <link rel="stylesheet" href="/plugins/hugrid/hugrid.css" />
+  
+
+  <!-- Main Stylesheet -->
+
+  
+  <link rel="stylesheet" href="/css/style.min.css" media="screen" />
+
+  <!--Favicon-->
+
+  
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
+  
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ABCDEFG123');
+    </script>
+  
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Head Partial --><!-- Custom CSS -->
+
+<link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
+</head>
+</head>
+  <body class="updates"> <!-- preloader start -->
+<div class="preloader">
+  
+  <img src="/images/preloader.gif" alt="preloader" />
+  
+</div>
+<!-- preloader end --> 
+<section class="menu menu-fix" id="menu">
+  <nav>
+    
+    <div class="menu-container">
+      <div class="desktop-menu-logo">
+        <a href="/">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="/images/logo.svg"
+            alt="Kelvin Aerospace Lab"
+            id="desktop-logo"
+          />
+          <img
+            class="img-fluid d-md-none"
+            src="/images/logo-dark.svg"
+            alt="Kelvin Aerospace Lab"
+            id="mobile-logo"
+            style="display: none;"
+          />
+        </a>
+      </div>
+      <ul class="desktop-menu list-inline mb-0" id="desktop-menu">
+        
+        <li class="menu-item hvr-underline-from-left 1">
+          <a href="/#about">Home</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 2">
+          <a href="/intro/">About Us</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 3">
+          <a href="/updates/">Updates</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 4">
+          <a href="/meetings/">Meetings</a>
+        </li>
+        
+        <li class="menu-item hvr-underline-from-left 5">
+          <a href="https://docs.kelvinaero.org">Documents</a>
+        </li>
+        
+      </ul>
+      
+      <div class="mobile-menu">
+        <div class="mobile-menu-nav">
+          <a class="menu-link">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+        <div class="mobile-menu-logo">
+          <a href="/">
+            <img
+              class="img-fluid"
+              src="/images/logo-dark.svg"
+              alt="Kelvin Aerospace Lab"
+              id="mobile-menu-logo"
+              style="height: 50px;"
+            />
+          </a>
+        </div>
+        <div class="menu-slider">
+          <nav>
+            <ul class="mobile-menu-list">
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/#about">Home</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/intro/">About Us</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/updates/">Updates</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="/meetings/">Meetings</a>
+              </li>
+              
+              <li class="mobile-menu-item 1 mx-auto">
+                <a href="https://docs.kelvinaero.org">Documents</a>
+              </li>
+              
+            </ul>
+            <ul class="mobile-menu-icons list-inline mx-auto">
+              
+              <li>
+                <a href="https://github.com/kelvinaerospacelab">
+                  
+                    <i class="fab fa-github fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="mailto:kelvinaero@proton.me">
+                  
+                    <i class="fas fa-envelope fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+              <li>
+                <a href="">
+                  
+                    <i class="fab fa-google-classroom fa-2x"></i>
+                  
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+<script>
+  
+  (function() {
+    
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) return;
+    
+    const menu = document.getElementById('menu');
+    const menuContainer = document.querySelector('.menu-container');
+    const desktopLogo = document.getElementById('desktop-logo');
+    
+    if (!menu || !menuContainer) return;
+    
+    
+    const lightLogoSrc = desktopLogo ? desktopLogo.getAttribute('src') : '';
+    
+    const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+    
+    
+    const heroHeight = window.innerHeight;
+    
+    function updateMenuOpacity() {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      
+      
+      let opacity = Math.min(scrollY / heroHeight, 1);
+      
+      
+      if (opacity === 0) {
+        
+        menuContainer.style.background = 'transparent';
+        menuContainer.classList.remove('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = lightLogoSrc;
+        }
+      } else {
+        
+        menuContainer.style.background = `rgba(255, 255, 255, ${opacity})`;
+        menuContainer.classList.add('menu-scrolled');
+        
+        if (desktopLogo) {
+          desktopLogo.src = darkLogoSrc;
+        }
+      }
+      
+      
+      if (scrollY > 10) {
+        menuContainer.style.boxShadow = `0 2px 10px rgba(0, 0, 0, ${opacity * 0.1})`;
+      } else {
+        menuContainer.style.boxShadow = 'none';
+      }
+    }
+    
+    
+    updateMenuOpacity();
+    
+    
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateMenuOpacity();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    
+    window.addEventListener('resize', updateMenuOpacity);
+  })();
+  
+  
+  (function() {
+    const isHomepage = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    if (!isHomepage) {
+      const desktopLogo = document.getElementById('desktop-logo');
+      if (desktopLogo) {
+        const lightLogoSrc = desktopLogo.getAttribute('src');
+        const darkLogoSrc = lightLogoSrc.replace('logo.svg', 'logo-dark.svg');
+        desktopLogo.src = darkLogoSrc;
+      }
+    }
+  })();
+</script>
+<section class="about-me" id="update-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <article class="update-single">
+            <div class="text-center mb-5">
+              <h1 class="section-title">Regenerative Cooling Optimization #1</h1>
+              <p class="text-muted">December 28, 2025</p>
+            </div>
+            
+            <div class="update-content">
+              <style>
+                .update-content img {
+                  max-width: 100%;
+                  height: auto;
+                  display: block;
+                  margin: 1.5rem auto;
+                  border-radius: 4px;
+                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                
+                .update-content {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                }
+                
+                .update-content p {
+                  margin-bottom: 1.5rem;
+                }
+              </style>
+              <p>This entry documents the regenerative cooling optimization process using RPA (Rocket Propulsion Analysis). The goal was to design coolant channels that keep the chamber and throat walls within acceptable temperature limits while maintaining reasonable pressure drop and manufacturability.</p>
+<h2 id="initial-baseline-case-c0">Initial Baseline: Case C0</h2>
+<p>The first attempt used a simple 1 mm × 1 mm channel geometry to establish a baseline.</p>
+<p><img src="/images/updates/cooling/C0.png" alt="C0 Result"></p>
+<p>Maximum wall temperature approached <strong>1600 K</strong>, and the coolant-side wall reached <strong>1000 K</strong>. This is far too high for structural materials—neither aluminum alloys nor stainless steel can maintain strength at these temperatures.</p>
+<h2 id="automatic-mode-attempt-case-c1">Automatic Mode Attempt: Case C1</h2>
+<p>Next, we tried RPA&rsquo;s &ldquo;automatic&rdquo; optimization mode, hoping it would find a reasonable geometry.</p>
+<p><img src="/images/updates/cooling/C1.png" alt="C1 Result"></p>
+<p>Unfortunately, the entire engine heated up to over <strong>1200 K</strong>. The automatic solver failed to converge to a practical design, likely due to the solver use the maximum channel size to 1.5mm in hight.</p>
+<h2 id="refined-geometries-cases-c2-c3">Refined Geometries: Cases C2, C3</h2>
+<p>After manual iteration, Cases C2 and C3 show progressively improved thermal performance.</p>
+<p><img src="/images/updates/cooling/C2.png" alt="C2 Result">
+<img src="/images/updates/cooling/C3.png" alt="C3 Result"></p>
+<p>Throat maximum temperature reduced to approximately <strong>950 K</strong>. However, this is still above the safe operating range for aluminum alloys and standard stainless steels, where material strength begins to degrade significantly. Additionally, it can be noted that the coolant temperature does not appear to have improved, at which point the ethanol completely vaporizes.</p>
+<p>To achieve the thermal performance of Case C3, the narrowest cooling channel cross-section becomes <strong>0.01 mm</strong>. This is effectively impossible to manufacture with any practical 3D metal printing.</p>
+<h2 id="alternative-approach-diluted-ethanol-80">Alternative Approach: Diluted Ethanol (80%)</h2>
+<p>Since pure ethanol cooling proved insufficient, we explored using <strong>80% ethanol</strong> (20% water by mass) as both propellant and coolant. The hypothesis was that the higher specific heat capacity and latent heat of vaporization from water content might improve cooling performance.</p>
+<p><img src="/images/updates/cooling/C4.png" alt="C4 Result (75% Ethanol)"></p>
+<p>Chamber wall temperature decreased slightly compared to pure ethanol, but throat temperature remained nearly unchanged, still around <strong>950 K</strong>.
+Diluting ethanol reduces specific impulse due to lower combustion temperature and molecular weight increase.</p>
+<p>Further investigation is needed, and the current setup can&rsquo;t even withstand a few seconds of ignition.</p>
+
+            </div>
+            
+            <div class="text-center mt-5">
+              <a href="/updates/" class="btn btn-outline-primary">Back to Updates</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section><div class="footer container text-center" id="contact">
+  <ul class="footer-icons list-inline">
+    
+      <li>
+        <a href="https://github.com/kelvinaerospacelab" target="_blank" rel="noreferrer"
+          ><i class="fab fa-github footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+      <li>
+        <a href="mailto:kelvinaero@proton.me" target="_blank" rel="noreferrer"
+          ><i class="fas fa-envelope footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+      <li>
+        <a href="" target="_blank" rel="noreferrer"
+          ><i class="fab fa-google-classroom footer-icon fa-3x" aria-label=""></i
+        ></a>
+      </li>
+    
+  </ul>
+  <div class="credit">
+    © 2025 Kelvin Aerospace Lab. All rights reserved.
+  </div>
+</div>
+<!-- JS Plugins --> 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+
+<script src="/plugins/text-animation/text-animation.js"></script>
+
+<script src="/plugins/hugrid/hugrid.min.js"></script>
+ <!-- Main Scripts --> 
+<script src="/js/script.min.js"></script>
+
+<script src="/js/hugrid.custom.min.js"></script>
+</body>
+</html>

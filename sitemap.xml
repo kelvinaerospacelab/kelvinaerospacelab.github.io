@@ -2,67 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:7490/</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/117-simulation/</loc>
+    <lastmod>2026-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/116-size2/</loc>
+    <lastmod>2026-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/115-cooling2/</loc>
     <lastmod>2026-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/intro/</loc>
+    <loc>http://localhost:7490/intro/</loc>
     <lastmod>2026-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/07/</loc>
+    <loc>http://localhost:7490/updates/114-injector/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/113-contraction-ratio/</loc>
+    <lastmod>2026-01-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/112-lstar/</loc>
+    <lastmod>2026-01-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/111-cooling1/</loc>
+    <lastmod>2025-12-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/110-size1/</loc>
+    <lastmod>2025-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/109-cooling0/</loc>
+    <lastmod>2025-12-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/108-injection/</loc>
+    <lastmod>2025-11-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/107-deltap/</loc>
+    <lastmod>2025-11-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/updates/106-chemical/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:7490/meetings/07/</loc>
     <lastmod>2025-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/06/</loc>
+    <loc>http://localhost:7490/meetings/06/</loc>
     <lastmod>2025-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/05/</loc>
+    <loc>http://localhost:7490/meetings/05/</loc>
     <lastmod>2025-10-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/updates/105-website/</loc>
+    <loc>http://localhost:7490/updates/105-website/</loc>
     <lastmod>2025-10-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/updates/104-design/</loc>
+    <loc>http://localhost:7490/updates/104-design/</loc>
     <lastmod>2025-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/updates/103-electronics/</loc>
+    <loc>http://localhost:7490/updates/103-electronics/</loc>
     <lastmod>2025-10-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/</loc>
+    <loc>http://localhost:7490/meetings/</loc>
     <lastmod>2025-10-07T17:37:50-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/04/</loc>
+    <loc>http://localhost:7490/meetings/04/</loc>
     <lastmod>2025-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/03/</loc>
+    <loc>http://localhost:7490/meetings/03/</loc>
     <lastmod>2025-09-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/updates/102-website/</loc>
+    <loc>http://localhost:7490/updates/102-website/</loc>
     <lastmod>2025-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/02/</loc>
+    <loc>http://localhost:7490/meetings/02/</loc>
     <lastmod>2025-09-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/meetings/01/</loc>
+    <loc>http://localhost:7490/meetings/01/</loc>
     <lastmod>2025-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/updates/101-welcome/</loc>
+    <loc>http://localhost:7490/updates/</loc>
     <lastmod>2025-09-12T13:35:55-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/reference/construction.excalidraw/</loc>
+    <loc>http://localhost:7490/updates/101-welcome/</loc>
+    <lastmod>2025-09-12T13:35:55-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/reference/report/regen_cooling_report/</loc>
+    <loc>http://localhost:7490/reference/construction.excalidraw/</loc>
   </url><url>
-    <loc>http://localhost:1313/reference/report/rocket_engine_report/</loc>
+    <loc>http://localhost:7490/reference/report/regen_cooling_report/</loc>
   </url><url>
-    <loc>http://localhost:1313/reference/testbench.excalidraw/</loc>
+    <loc>http://localhost:7490/reference/report/rocket_engine_report/</loc>
   </url><url>
-    <loc>http://localhost:1313/reference/what-is-kelvin-aero/</loc>
+    <loc>http://localhost:7490/reference/testbench.excalidraw/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:7490/reference/what-is-kelvin-aero/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/excalidraw/</loc>
+    <loc>http://localhost:7490/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/reference/</loc>
+    <loc>http://localhost:7490/tags/excalidraw/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:7490/reference/</loc>
+  </url><url>
+    <loc>http://localhost:7490/tags/</loc>
   </url>
 </urlset>

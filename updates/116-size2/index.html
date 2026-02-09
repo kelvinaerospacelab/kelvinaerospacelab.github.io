@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
   <meta charset="utf-8" />
   <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Meeting #05" />
+  <meta property="og:title" content="V1.1 Size Calculation (200 N)" />
   <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
-  <meta property="og:url" content="http://localhost:1313/meetings/meeting_05/" />
+  <meta property="og:url" content="http://localhost:7490/updates/116-size2/" />
   <meta property="og:site_name" content="Kelvin Aerospace Lab" />
   
     
-      <meta property="og:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
     
   
   <meta property="og:locale" content="en" />
   
-    <meta property="article:published_time" content="2025-10-14T00:00:00Z" />
-    <meta property="article:modified_time" content="2025-10-14T00:00:00Z" />
+    <meta property="article:published_time" content="2026-02-05T00:00:00Z" />
+    <meta property="article:modified_time" content="2026-02-05T00:00:00Z" />
     
   
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Meeting #05" />
+  <meta name="twitter:title" content="V1.1 Size Calculation (200 N)" />
   <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
   
     
@@ -33,10 +33,10 @@
   
   
     
-      <meta name="twitter:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
     
   
-  <title>Meeting #05</title>
+  <title>V1.1 Size Calculation (200 N)</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +71,7 @@
   <!--Favicon-->
 
   
-    <link rel="icon" type="image/png" href="/images/favicon1.png" />
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
   
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
@@ -90,9 +90,94 @@
   <!-- Custom Head Partial --><!-- Custom CSS -->
 
 <link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
 </head>
 </head>
-  <body class="meetings"> <!-- preloader start -->
+  <body class="updates"> <!-- preloader start -->
 <div class="preloader">
   
   <img src="/images/preloader.gif" alt="preloader" />
@@ -309,90 +394,19 @@
     }
   })();
 </script>
-
-
-
-
-<section class="header" id="meetings-hero">
-  <div class="hero-image">
-    
-    <img
-      class="d-none d-md-block"
-      src="/images/moon.jpg"
-      alt="background"
-    />
-    <img
-      class="d-md-none"
-      src="/images/moon.jpg"
-      alt="background"
-    />
-    
-  </div>
-  <div class="container">
-    <div class="row content">
-      <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 head-container">
-        <div class="head-holder">
-          <h1 class="introduction"><span class='title-kelvin'>MEETING</span> NOTES</h1>
-          
-          <div class="animated-text">
-            <strong class="cd-headline clip">
-              <span class="cd-words-wrapper">
-                
-                  
-                  <b class="is-visible">Meeting minutes and discussions</b>
-                  
-                
-                  
-                  <b>Team collaboration updates</b>
-                  
-                
-                  
-                  <b>Project progress tracking</b>
-                  
-                
-              </span>
-            </strong>
-          </div>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-      
-      const targetElement = document.querySelector('.meeting-content');
-      if (targetElement) {
-        const headerOffset = 250; 
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-        
-        setTimeout(() => {
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }, 100);
-      }
-    });
-  </script>
-
-  <section class="about-me" id="meeting-content">
+<section class="about-me" id="update-content">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <article class="meeting-single">
+          <article class="update-single">
             <div class="text-center mb-5">
-              <h1 class="section-title">251014 - Meeting #05</h1>
-              <p class="text-muted">October 14, 2025</p>
+              <h1 class="section-title">V1.1 Size Calculation (200 N)</h1>
+              <p class="text-muted">February 5, 2026</p>
             </div>
             
-            <div class="meeting-content">
+            <div class="update-content">
               <style>
-                .meeting-content img {
+                .update-content img {
                   max-width: 100%;
                   height: auto;
                   display: block;
@@ -401,108 +415,30 @@
                   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
                 }
                 
-                .meeting-content {
+                .update-content {
                   overflow-wrap: break-word;
                   word-wrap: break-word;
                 }
                 
-                .meeting-content p {
+                .update-content p {
                   margin-bottom: 1.5rem;
                 }
               </style>
-              <h2 id="general-discussion">General Discussion</h2>
-<p>The fifth meeting focused on deeper exploration of the rocket engine architecture, funding strategies, and organizational structure. The team reviewed progress on the website, discussed collaborative tools, and outlined plans for propulsion kit development and STEM outreach.</p>
-<h2 id="technical--project-discussions">Technical &amp; Project Discussions</h2>
-<h4 id="rocket-engine-architecture">Rocket Engine Architecture</h4>
+              <p>After completing the V1.0 design with 150 N thrust, thermal analysis revealed a problem which the engine was too small for effective regenerative cooling. This entry documents the transition to V1.1. The previous design established basic sizing from CEA results. However, when we put these data into RPA, we find that the throat diameter is only 8 mm; to achieve acceptable wall temperatures (&lt;900 K), channel width dropped below 0.5 mm and make them became unmachineable. We couldn&rsquo;t even use liquid film cooling because the required orifice was simply too small.</p>
+<h2 id="new-solution">New Solution</h2>
+<p>V1.1 increases both thrust and chamber pressure. This results in larger throat diameter which makes cooling channels manufacturable (&gt;1 mm width). Higher chamber pressure provides two benefits: it improves $I_{sp}$, partially offsetting the mass flow increase, and it allows higher coolant pressure for better convective heat transfer.</p>
+<p>From the throat area relation:</p>
+<p>$$A_t = \frac{\dot{m} c^*}{p_c} \propto \frac{F}{p_c \cdot I_{sp}}$$</p>
+<p>Increasing thrust faster than chamber pressure gives the needed geometric scaling for thermal management.</p>
+<h2 id="report-links">Report Links</h2>
 <ul>
-<li>
-<p><strong>Propulsion Kit Development</strong>: The team discussed the development of an out-of-the-box propulsion kit, including the engine, control system, algorithms, and test bench. The kit will have variants for educational and competition use, enabling aerospace enthusiasts to focus on rocket performance rather than engine development.</p>
-<ul>
-<li>Initial designs will prioritize compatibility with high-pressure oxygen and ethanol environments.</li>
-<li>The kit will be tested with water and air initially to ensure safety and cost-effectiveness before moving to propellants.</li>
-<li>Discussions highlighted the use of <strong>Proportional Control Solenoid Valves</strong> for precise flow control, with safety valves defaulting to closed positions when unpowered. Research is ongoing for valves compatible with rocket applications (e.g., stainless steel with Viton seals).</li>
-<li>Cost estimates for valves and components (e.g., fuel and oxidizer tanks, pipes) total approximately $400 for initial setups, with potential cost reductions via scrapyard sourcing for ethanol-compatible components.</li>
-</ul>
-</li>
-<li>
-<p><strong>Simulation Software</strong>: Members explored performance analysis tools like NASA CEA, Rocket Propulsion Analysis (RPA), and pyCEA. ANSYS remains the long-term standard, with free versions offering sufficient functionality for early simulations. Limitations of free RPA Lite were noted, and pyCEA was identified as a viable free alternative.</p>
-</li>
-<li>
-<p><strong>Component Selection</strong>:</p>
-<ul>
-<li><strong>Valves</strong>: Proportional solenoid valves (~$70–$290 each) are critical for fuel and oxidizer flow control. Safety valves include shut-off, pressure relief, and purge valves for line cleaning.</li>
-<li><strong>Tanks</strong>: Ethanol tanks can use gasoline-rated cans (<del>$30), while LOx tanks may use modified paintball canisters (</del>$60).</li>
-<li><strong>Pipes vs. Tubes</strong>: Ethanol lines can use affordable, rigid pipes instead of flexible tubes to reduce costs without compromising safety.</li>
-</ul>
-</li>
-</ul>
-<h4 id="test-bench-progress">Test Bench Progress</h4>
-<ul>
-<li>The electronics subgroup continued developing the Arduino-based data acquisition system, with plans to transition to ESP32 for enhanced capabilities.</li>
-<li>Sensors will measure pressure, thrust, propellant flow rate, temperature, and vibration, with real-time graphing and storage.</li>
-<li>The test bench frame will use scrap aluminum alloy profiles, with a cement shell and wood base for stability.</li>
-</ul>
-<h2 id="organizational-structure">Organizational Structure</h2>
-<p>The team formalized a three-part organizational structure:</p>
-<ol>
-<li><strong>Technological Innovation</strong>: Focuses on propulsion kit development, including engine design, control systems, and testing.</li>
-<li><strong>Manufacturing and Sales</strong>: Oversees production and distribution of propulsion kits to schools, educational institutions, and aerospace enthusiasts via platforms like Kickstarter.</li>
-<li><strong>Education, Community, and Outreach</strong>: Partners with schools and institutions to donate kits and promote STEM education. A portion of profits will fund STEM initiatives in underserved schools.</li>
-</ol>
-<h2 id="funding-and-outreach">Funding and Outreach</h2>
-<ul>
-<li>
-<p><strong>Funding Sources</strong>:</p>
-<ul>
-<li><strong>Propulsion Kit Sales</strong>: Primary revenue through Kickstarter crowdfunding for pre-orders of propulsion kits.</li>
-<li><strong>Sponsorships</strong>: Kickstarter, donations, component supplier sponsorships, and local business support.</li>
-<li><strong>Government and Social Funds</strong>: Exploring government grants, division funding, and alumni contributions.</li>
-<li><strong>Competitions</strong>: Revenue from advertising and ticket sales for rocket competitions.</li>
-</ul>
-</li>
-<li>
-<p><strong>Outreach Initiatives</strong>:</p>
-<ul>
-<li>Free propulsion kits will be donated to schools and educational institutions to promote STEM education.</li>
-<li>Social media presence will be managed to increase visibility, with a focus on YouTube for tutorials and project updates.</li>
-<li>Proposed STEM day camps and tutoring during the Christmas season to generate additional funds.</li>
-</ul>
-</li>
-</ul>
-<h2 id="website-and-collaboration-tools">Website and Collaboration Tools</h2>
-<ul>
-<li>
-<p><strong>Website Updates</strong>:</p>
-<ul>
-<li>The main website (<a href="https://www.kelvinaero.org">kelvinaero.org</a>) was updated with new features, though issues with SSL on the docs page and Winnipeg School Division blocking were resolved.</li>
-<li>A meetings page (<a href="https://www.kelvinaero.org/meetings">kelvinaero.org/meetings</a>) now archives all discussions, including Discord content.</li>
-<li>A bot was added to send Google Forms for club applications, though issues with form options (e.g., missing grade 9) were noted.</li>
-</ul>
-</li>
-<li>
-<p><strong>Collaboration Tools</strong>:</p>
-<ul>
-<li>GitHub remains the central platform for version control, with members urged to create branches and submit PRs to avoid errors.</li>
-<li>A documentation workflow using Obsidian and Markdown was discussed, with plans for a tutorial on GitHub, Obsidian, and Hugo usage.</li>
-<li>VS Code’s Live Share extension was proposed as an alternative to Zed IDE for real-time collaborative coding.</li>
-</ul>
-</li>
-</ul>
-<h2 id="next-steps">Next Steps</h2>
-<ul>
-<li>Finalize propulsion kit specifications and begin prototyping with water and air.</li>
-<li>Research and source cost-effective, rocket-compatible solenoid valves and other components.</li>
-<li>Develop a detailed funding strategy, including Kickstarter campaign preparation and outreach to local sponsors.</li>
-<li>Create a GitHub and Obsidian tutorial to streamline documentation and website updates.</li>
-<li>Continue test bench development, focusing on sensor integration and data logging.</li>
-<li>Plan STEM outreach events, including day camps and school partnerships.</li>
-<li>Monitor SpaceX’s Starship Flight 11 (scheduled for October 13, 2025) for inspiration and technical insights.</li>
+<li>CEA report and structural report are collected <a href="http://docs.kelvinaero.org/Projects/v1.1%20Standard%20Kit%20Prototype/">here</a></li>
 </ul>
 
             </div>
             
             <div class="text-center mt-5">
-              <a href="/meetings/" class="btn btn-outline-primary">Back to Meetings</a>
+              <a href="/updates/" class="btn btn-outline-primary">Back to Updates</a>
             </div>
           </article>
         </div>

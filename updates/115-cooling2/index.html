@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
   <meta charset="utf-8" />
   <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Your Article Title" />
+  <meta property="og:title" content="Regenerative Cooling Optimization #2" />
   <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
-  <meta property="og:url" content="http://localhost:1313/updates/frontmatter-config-example/" />
+  <meta property="og:url" content="http://localhost:7490/updates/115-cooling2/" />
   <meta property="og:site_name" content="Kelvin Aerospace Lab" />
   
     
-      <meta property="og:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
     
   
   <meta property="og:locale" content="en" />
   
-    <meta property="article:published_time" content="2025-10-12T00:00:00Z" />
-    <meta property="article:modified_time" content="2025-10-12T00:00:00Z" />
+    <meta property="article:published_time" content="2026-02-04T00:00:00Z" />
+    <meta property="article:modified_time" content="2026-02-04T00:00:00Z" />
     
   
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Your Article Title" />
+  <meta name="twitter:title" content="Regenerative Cooling Optimization #2" />
   <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
   
     
@@ -33,10 +33,10 @@
   
   
     
-      <meta name="twitter:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
     
   
-  <title>Your Article Title</title>
+  <title>Regenerative Cooling Optimization #2</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +71,7 @@
   <!--Favicon-->
 
   
-    <link rel="icon" type="image/png" href="/images/favicon1.png" />
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
   
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
@@ -90,6 +90,91 @@
   <!-- Custom Head Partial --><!-- Custom CSS -->
 
 <link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
 </head>
 </head>
   <body class="updates"> <!-- preloader start -->
@@ -315,8 +400,8 @@
         <div class="col-lg-8 mx-auto">
           <article class="update-single">
             <div class="text-center mb-5">
-              <h1 class="section-title">Your Article Title</h1>
-              <p class="text-muted">October 12, 2025</p>
+              <h1 class="section-title">Regenerative Cooling Optimization #2</h1>
+              <p class="text-muted">February 4, 2026</p>
             </div>
             
             <div class="update-content">
@@ -339,56 +424,87 @@
                   margin-bottom: 1.5rem;
                 }
               </style>
-              <h2 id="this-is-the-article-body">This is the article body</h2>
-<p>Your article content starts here&hellip;</p>
-<h3 id="example-title">Example title</h3>
-<p>If the article contains images and <code>featured_image</code> is not set, the first image will automatically be used as the background for the list page:</p>
-<p><img src="/images/your-image.jpg" alt="Sample image"></p>
-<p>More&hellip;</p>
-<h2 id="complete-example">Complete example</h2>
-<h3 id="minimal-configuration-recommended">Minimal configuration (recommended)</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;My Update&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-10-12</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><p>The system automatically handles background images and snippets.</p>
-<h3 id="fully-customizable-configuration">Fully Customizable Configuration</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Major Update: Rocket Launch Successful&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-10-15</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">draft</span>: <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">featured_image</span>: <span style="color:#e6db74">&#34;/images/rocket-launch.jpg&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;We successfully completed our first rocket test launch, reaching the target altitude of 10 kilometers. This marks the beginning of a new phase for the project.&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">overlay_color</span>: <span style="color:#e6db74">&#34;rgba(0, 0, 0, 0.5)&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">text_color</span>: <span style="color:#e6db74">&#34;#ffffff&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">button_text</span>: <span style="color:#e6db74">&#34;View Details&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">button_style</span>: <span style="color:#e6db74">&#34;border-color: #943929; background: rgba(148, 57, 41, 0.2);&#34;</span>
-</span></span><span style="display:flex;"><span>---
-</span></span></code></pre></div><h2 id="technical-description">Technical Description</h2>
-<h3 id="background-image-selection-logic">Background Image Selection Logic</h3>
+              <p>The previous regenerative cooling optimization reached a critical limitation were even with optimized channel geometry, throat wall temperatures remained around 950 K. The fundamental issue is heat flux density at the throat is too concentrated for convective cooling alone to handle without either:</p>
 <ol>
-<li><strong>Priority 1</strong>: <code>featured_image</code> field</li>
-<li><strong>Priority 2</strong>: The first <code>&lt;img&gt;</code> image in the article Tags Images</li>
-<li><strong>Priority 3</strong>: Randomly assigned from <code>/images/updates-random/</code> (based on the article path hash, fixed)</li>
+<li>Extremely narrow channels (unmachineable), or</li>
+<li>Unacceptably high wall temperatures.</li>
 </ol>
-<h3 id="random-image-pool">Random Image Pool</h3>
-<p>Currently 6 space images:</p>
+<p>This entry documents the solution: <strong>film cooling</strong>. The dataset is using pure ethanol as fuel without adding water.</p>
+<p><strong>Film cooling</strong> works by injecting a thin layer of coolant along the inner wall surface, creating a protective &ldquo;film&rdquo; between the hot combustion gases and the metal wall. This coolant absorbs heat directly from the gas boundary layer via convection, and provides a thermal barrier also evaporates that reduces heat flux to the wall.</p>
+<p>The injected film coolant reduces the effective gas-side heat transfer coefficient and lowers the driving temperature for wall heating.</p>
+<p>Of course, it will also reduce the O/F ratio (if fuel is used for cooling), thereby lowering the combustion temperature and specific impulse.</p>
+<h2 id="regenerative-cooling-only">Regenerative Cooling Only</h2>
+<p>This is RPA data:</p>
+<p>First, we re-ran the analysis with refined geometry but no film cooling to establish a baseline.</p>
+<p><img src="/images/updates/cooling/D4.png" alt="D4 Data">
+<img src="/images/updates/cooling/D5.png" alt="D5 Temperature Distribution">
+<img src="/images/updates/cooling/D6.png" alt="D6 Wall Temperature Profile"></p>
+<p>We are able to find that:</p>
 <ul>
-<li>GSFC_20171208_Archive_e000842~large.jpg (Earth)</li>
-<li>PIA26077~orig.jpg (Mars)</li>
-<li>S84-27031~large.jpg (Space Capsule)</li>
-<li>carina_nebula~orig.png (Nebula)</li>
-<li>iss064e041512~large.jpg (International Space Station)</li>
-<li>iss073e0659744~large.jpg (Earth at night)</li>
+<li>Maximum wall temperature (Twg): 2015 K at the throat (81.7 mm)</li>
+<li>Peak heat flux: 9626 kW/m²</li>
+<li>Coolant-side wall temperature (Twc): 1530 K</li>
 </ul>
-<h3 id="style-restrictions">Style Restrictions</h3>
+<p>At 2015 K:</p>
 <ul>
-<li><strong>Title</strong>: Automatically sized, mobile responsive</li>
-<li><strong>Abstract</strong>: Maximum 3 lines on desktop, 2 lines on mobile, hidden if exceeding</li>
-<li><strong>Button</strong>: Fixed style, color can be customized using <code>button_style</code></li>
-<li><strong>Content area</strong>: Maximum width 600px, left-aligned, 8% left margin</li>
+<li>Aluminum melts (~930 K).</li>
+<li>Stainless steel loses most of its strength (~1200 K softening).</li>
+<li>Even high-temperature alloys (Inconel, copper alloys) begin to degrade structurally.</li>
 </ul>
+<p>As we predicted, the high heat flux of the small engine is the cause of the problem.</p>
+<h2 id="with-film-cooling-17-mass-flow">With Film Cooling (17% Mass Flow)</h2>
+<p>We introduced <strong>film cooling</strong> by injecting <strong>17% of the total coolant mass flow</strong> (relative to the regenerative coolant flow) as a thin film along the inner wall, starting upstream of the chamber.</p>
+<p><img src="/images/updates/cooling/D1.png" alt="D1 Data">
+<img src="/images/updates/cooling/D2.png" alt="D2 Temperature Distribution">
+<img src="/images/updates/cooling/D3.png" alt="D3 Wall Temperature Profile"></p>
+<p>As can be seen from the diagram, the temperature at the top of the engine is lower because a liquid film is injected at the top.</p>
+<ul>
+<li>Maximum wall temperature (Twg): 880 K at the throat (81.7 mm)</li>
+<li>Peak heat flux: 2790 kW/m²</li>
+<li>Coolant-side wall temperature (Twc): 744 K</li>
+</ul>
+<h2 id="performance-comparison">Performance Comparison</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Parameter</th>
+          <th>Pure Regenerative ‎‎</th>
+          <th>With Film Cooling ‎‎</th>
+          <th>Improvement</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Max wall temp (Twg)</td>
+          <td>2015 K</td>
+          <td>880 K</td>
+          <td><strong>-56%</strong></td>
+      </tr>
+      <tr>
+          <td>Max heat flux</td>
+          <td>9626 kW/m²</td>
+          <td>2790 kW/m²</td>
+          <td><strong>-71%</strong></td>
+      </tr>
+      <tr>
+          <td>Coolant-side temp (Twc)</td>
+          <td>1530 K</td>
+          <td>744 K</td>
+          <td><strong>-51%</strong></td>
+      </tr>
+      <tr>
+          <td>‎</td>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p>The film cooling layer provides a <strong>factor of 2.3× reduction</strong> in peak wall temperature which bringing it well within the safe operating range for copper alloys, stainless steel, and even aluminum (with coatings). The ethanol also stopped boiling.</p>
+<p><em>Notice: Since the O/F ratio remains unchanged, and the fuel in the film cooling section is essentially not involved in combustion, the main combustion chamber becomes more fuel-rich, theoretically resulting in a higher specific impulse. Although the overall specific impulse decreases, this loss requires further investigation. It is foreseeable that the decrease in Isp due to fuel loss will be greater than the increase in Isp due to the increase in O/F.</em></p>
+<p>Based on the material, film coolings are not a panacea. The effectiveness depends on injection velocity and angle, which must be low enough to stay attached to the wall (not blow off into the main stream).</p>
+<p>In our case, 17% film flow strikes a balance between thermal protection and acceptable $I_{sp}$ penalty (estimated ~2–3% loss due to incomplete mixing).</p>
+<p>Next, transient simulation of the nozzle will be performed to ensure it meets design expectations. Another critical part is to validate film injection geometry, direction and method to minimize $I_{sp}$ penalty.</p>
 
             </div>
             

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
   <meta charset="utf-8" />
   <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Updates" />
   <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
-  <meta property="og:url" content="http://localhost:1313/updates/" />
+  <meta property="og:url" content="http://localhost:7490/updates/" />
   <meta property="og:site_name" content="Kelvin Aerospace Lab" />
   
     
-      <meta property="og:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
     
   
   <meta property="og:locale" content="en" />
@@ -29,7 +29,7 @@
   
   
     
-      <meta name="twitter:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
     
   
   <title>Updates</title>
@@ -67,7 +67,7 @@
   <!--Favicon-->
 
   
-    <link rel="icon" type="image/png" href="/images/favicon1.png" />
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
   
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
@@ -86,6 +86,91 @@
   <!-- Custom Head Partial --><!-- Custom CSS -->
 
 <link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
 </head>
 </head>
   <body class="updates"> <!-- preloader start -->
@@ -465,6 +550,342 @@
   </style>
   
   <div>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/fluent/mach.png" alt="Transient Nozzle Simulation (Fluent)" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Transient Nozzle Simulation (Fluent)</h1>
+        <p class="update-date">February 8, 2026</p>
+        <p class="update-summary">
+          
+            After establishing the thermal design with regenerative and film cooling, the next step is to validate the nozzle flow behavior under realistic operating conditions by transient CFD simulation.
+During …
+          
+        </p>
+        <a href="/updates/117-simulation/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/v1.1pt.png" alt="V1.1 Size Calculation (200 N)" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">V1.1 Size Calculation (200 N)</h1>
+        <p class="update-date">February 5, 2026</p>
+        <p class="update-summary">
+          
+            After completing the V1.0 design with 150 N thrust, thermal analysis revealed a problem which the engine was too small for effective regenerative cooling. This entry documents the transition to V1.1. …
+          
+        </p>
+        <a href="/updates/116-size2/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/cooling/D3.png" alt="Regenerative Cooling Optimization #2" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Regenerative Cooling Optimization #2</h1>
+        <p class="update-date">February 4, 2026</p>
+        <p class="update-summary">
+          
+            The previous regenerative cooling optimization reached a critical limitation were even with optimized channel geometry, throat wall temperatures remained around 950 K. The fundamental issue is heat …
+          
+        </p>
+        <a href="/updates/115-cooling2/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/injectordemo.png" alt="Injector Demo" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Injector Demo</h1>
+        <p class="update-date">February 1, 2026</p>
+        <p class="update-summary">
+          
+            The injector is arguably the most critical component of a liquid rocket engine. It must meter propellant flow, atomize liquids into fine droplets, and ensure uniform mixing across the combustion …
+          
+        </p>
+        <a href="/updates/114-injector/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/AcAt.png" alt="Contraction Ratio Study" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Contraction Ratio Study</h1>
+        <p class="update-date">January 14, 2026</p>
+        <p class="update-summary">
+          
+            While L* defines the characteristic residence time, the contraction ratio $A_c/A_t$ (chamber area to throat area) fundamentally shapes the combustion chamber&rsquo;s physical dimensions. This …
+          
+        </p>
+        <a href="/updates/113-contraction-ratio/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/LSTAR.png" alt="Combustion Chamber L* Optimization" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Combustion Chamber L* Optimization</h1>
+        <p class="update-date">January 7, 2026</p>
+        <p class="update-summary">
+          
+            Characteristic Length (L*) Analysis A critical parameter in combustion chamber design is the characteristic length L*, which directly affects combustion efficiency and chamber geometry. L* represents …
+          
+        </p>
+        <a href="/updates/112-lstar/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/cooling/C4.png" alt="Regenerative Cooling Optimization #1" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Regenerative Cooling Optimization #1</h1>
+        <p class="update-date">December 28, 2025</p>
+        <p class="update-summary">
+          
+            This entry documents the regenerative cooling optimization process using RPA (Rocket Propulsion Analysis). The goal was to design coolant channels that keep the chamber and throat walls within …
+          
+        </p>
+        <a href="/updates/111-cooling1/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/v1.0pt.png" alt="V1.0 Size Calculation (150 N)" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">V1.0 Size Calculation (150 N)</h1>
+        <p class="update-date">December 20, 2025</p>
+        <p class="update-summary">
+          
+            This entry records the basic size calculation for a 150 N thrust, 10 bar chamber pressure, GOX/ethanol engine. This is a very small size, and we are still evaluating its manufacturing feasibility. …
+          
+        </p>
+        <a href="/updates/110-size1/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/cooling/B1.png" alt="Cooling: Concept and Regenerative Approach" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Cooling: Concept and Regenerative Approach</h1>
+        <p class="update-date">December 9, 2025</p>
+        <p class="update-summary">
+          
+            Combustion temperatures in rocket chambers exceed 3000 K, while aluminum melts at 930 K, stainless steel loses strength above 1000 K, and copper alloys fail around 1300–1500 K. Without cooling, the …
+          
+        </p>
+        <a href="/updates/109-cooling0/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/R.jpg" alt="A Supersonic Misconception" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">A Supersonic Misconception</h1>
+        <p class="update-date">November 23, 2025</p>
+        <p class="update-summary">
+          
+            When studying injector design, an interesting question arises: why are most injectors designed for subsonic flow rather than supersonic? At first glance, supersonic gas injection seems advantageous—it …
+          
+        </p>
+        <a href="/updates/108-injection/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+      
+      
+      
+      
+      <img src="/images/updates/pressure.png" alt="Overview of the Delta-P (Pressure Drop)" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Overview of the Delta-P (Pressure Drop)</h1>
+        <p class="update-date">November 6, 2025</p>
+        <p class="update-summary">
+          
+            
+Delta-P, pressure drop, is perhaps the most critical, important, and complex part of the entire rocket engine. In Sutton &amp; Biblarz, Delta-P is everywhere: across the injector, through the feed …
+          
+        </p>
+        <a href="/updates/107-deltap/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
+    
+    <section class="update-fullscreen-card">
+      
+      
+      
+        
+        
+          
+          
+          
+            
+          
+        
+      
+      
+      
+      
+      <img src="/images/updates/elements.png" alt="Chemical Analysis" class="update-background">
+      
+      <div class="update-overlay" style=""></div>
+      
+      <div class="update-content" style="">
+        <h1 class="update-title">Chemical Analysis</h1>
+        <p class="update-date">November 2, 2025</p>
+        <p class="update-summary">
+          
+            This update summarizes how we choose mixture ratio, thrust, and chamber pressure for a small GOX/ethanol engine.
+Mixture Ratio The mixture ratio is defined as
+$$r = \frac{\dot{m}_o}{\dot{m}_f}$$
+In …
+          
+        </p>
+        <a href="/updates/106-chemical/" class="update-button" style="">
+          Read More
+        </a>
+      </div>
+    </section>
     
     <section class="update-fullscreen-card">
       

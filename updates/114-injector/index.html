@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
   <meta charset="utf-8" />
   <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Simulation Updates #1" />
+  <meta property="og:title" content="Injector Demo" />
   <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
-  <meta property="og:url" content="http://localhost:1313/updates/106-simulation/" />
+  <meta property="og:url" content="http://localhost:7490/updates/114-injector/" />
   <meta property="og:site_name" content="Kelvin Aerospace Lab" />
   
     
-      <meta property="og:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
     
   
   <meta property="og:locale" content="en" />
   
-    <meta property="article:published_time" content="2025-10-21T00:00:00Z" />
-    <meta property="article:modified_time" content="2025-10-21T00:00:00Z" />
+    <meta property="article:published_time" content="2026-02-01T00:00:00Z" />
+    <meta property="article:modified_time" content="2026-02-01T00:00:00Z" />
     
   
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Simulation Updates #1" />
+  <meta name="twitter:title" content="Injector Demo" />
   <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
   
     
@@ -33,10 +33,10 @@
   
   
     
-      <meta name="twitter:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
     
   
-  <title>Simulation Updates #1</title>
+  <title>Injector Demo</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +71,7 @@
   <!--Favicon-->
 
   
-    <link rel="icon" type="image/png" href="/images/favicon1.png" />
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
   
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
@@ -90,6 +90,91 @@
   <!-- Custom Head Partial --><!-- Custom CSS -->
 
 <link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
 </head>
 </head>
   <body class="updates"> <!-- preloader start -->
@@ -315,8 +400,8 @@
         <div class="col-lg-8 mx-auto">
           <article class="update-single">
             <div class="text-center mb-5">
-              <h1 class="section-title">Simulation Updates #1</h1>
-              <p class="text-muted">October 21, 2025</p>
+              <h1 class="section-title">Injector Demo</h1>
+              <p class="text-muted">February 1, 2026</p>
             </div>
             
             <div class="update-content">
@@ -339,7 +424,24 @@
                   margin-bottom: 1.5rem;
                 }
               </style>
-              
+              <p>The injector is arguably the most critical component of a liquid rocket engine. It must meter propellant flow, atomize liquids into fine droplets, and ensure uniform mixing across the combustion chamber cross-section.</p>
+<p>For this project, we explored a pintle injector design. Pintle injectors use a central post (the pintle) surrounded by an annular gap through which propellants are injected. The central stream impinges on the outer annular flow, creating a radial spray pattern that distributes propellants across the chamber.</p>
+<p><img src="/images/updates/injectordemo.png" alt="Injector Demo"></p>
+<h2 id="low-pressure-water-test">Low-Pressure Water Test</h2>
+<p>To validate the basic flow behavior before committing to high-pressure hardware, we built a simple demonstration model. Since the test was conducted at low pressure (ordinary tap water pressure), we used tangential injection into the annular gap to ensure the flow worked properly and created the desired swirl pattern.</p>
+<div class="embed-responsive embed-responsive-16by9 ">
+  <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/LdkQ7hK4OvQ?rel=0" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>The video shows the mixing behavior of the test setup.</p>
+<p>Please notice that:</p>
+<ul>
+<li>This is a low-pressure visualization test only, not representative of actual injector performance.</li>
+<li>Due to low pressure, there is almost no atomization. The flow remains in large liquid sheets and streams rather than fine droplets.</li>
+<li>However, the umbrella-shaped dispersion and impingement pattern match expectations for a pintle injector geometry.</li>
+</ul>
+<p>This test confirms the basic fluid dynamics of the design. Actual performance at operating pressure would produce better atomization and more uniform mixing.</p>
+
             </div>
             
             <div class="text-center mt-5">

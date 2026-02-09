@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=7490&amp;path=livereload" data-no-instant defer></script><head>
   <meta charset="utf-8" />
   <!-- Open Graph / Facebook / Discord / Slack / LinkedIn -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="" />
+  <meta property="og:title" content="Overview of the Delta-P (Pressure Drop)" />
   <meta property="og:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
-  <meta property="og:url" content="http://localhost:1313/updates/untitled/" />
+  <meta property="og:url" content="http://localhost:7490/updates/107-deltap/" />
   <meta property="og:site_name" content="Kelvin Aerospace Lab" />
   
     
-      <meta property="og:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta property="og:image" content="http://localhost:7490/images/klvweb.png" />
     
   
   <meta property="og:locale" content="en" />
   
-    <meta property="article:published_time" content="0001-01-01T00:00:00Z" />
-    <meta property="article:modified_time" content="0001-01-01T00:00:00Z" />
+    <meta property="article:published_time" content="2025-11-06T00:00:00Z" />
+    <meta property="article:modified_time" content="2025-11-06T00:00:00Z" />
     
   
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="" />
+  <meta name="twitter:title" content="Overview of the Delta-P (Pressure Drop)" />
   <meta name="twitter:description" content="Kelvin Aerospace Lab (KAL) provides hands-on engineering experience in designing, building, and testing aerospace systems, sparking curiosity about space exploration and engineering while offering opportunities to learn advanced physics, engineering, and electronics in a collaborative environment." />
   
     
@@ -33,10 +33,10 @@
   
   
     
-      <meta name="twitter:image" content="http://localhost:1313/images/klvweb.png" />
+      <meta name="twitter:image" content="http://localhost:7490/images/klvweb.png" />
     
   
-  <title></title>
+  <title>Overview of the Delta-P (Pressure Drop)</title>
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -71,7 +71,7 @@
   <!--Favicon-->
 
   
-    <link rel="icon" type="image/png" href="/images/favicon1.png" />
+    <link rel="icon" type="image/png" href="/images/favicon2.png" />
   
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABCDEFG123"></script>
@@ -90,6 +90,91 @@
   <!-- Custom Head Partial --><!-- Custom CSS -->
 
 <link rel="stylesheet" href="/css/custom.min.css" media="screen" />
+
+<!-- KaTeX for Math Rendering -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ],
+      throwOnError: false
+    });"></script>
+
+<!-- Chart.js for chart code blocks -->
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js" crossorigin="anonymous"></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.Chart || !window.jsyaml) {
+      return;
+    }
+
+    var blocks = document.querySelectorAll('script[type="application/x-chart-yaml"][data-chart-target]');
+    blocks.forEach(function (block) {
+      var targetId = block.getAttribute('data-chart-target');
+      var canvas = document.getElementById(targetId);
+      if (!canvas) {
+        return;
+      }
+
+      try {
+        var raw = block.textContent || '';
+        var chartDef = window.jsyaml.load(raw);
+        if (!chartDef || !chartDef.series || !chartDef.labels) {
+          return;
+        }
+
+        var datasets = chartDef.series.map(function (series) {
+          return {
+            label: series.title || '',
+            data: series.data || [],
+            borderColor: series.color || undefined,
+            backgroundColor: series.color || undefined,
+            borderWidth: series.lineWidth || 2,
+            borderDash: series.borderDash || undefined,
+            pointRadius: (series.pointRadius !== undefined) ? series.pointRadius : (chartDef.pointRadius || 3),
+            pointStyle: series.pointStyle || undefined,
+            fill: !!chartDef.fill,
+            tension: (chartDef.tension !== undefined) ? chartDef.tension : 0.3
+          };
+        });
+
+        var options = {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: chartDef.legend !== false }
+          },
+          scales: {
+            x: { title: { display: !!chartDef.xTitle, text: chartDef.xTitle || '' } },
+            y: { title: { display: !!chartDef.yTitle, text: chartDef.yTitle || '' }, beginAtZero: !!chartDef.beginAtZero }
+          }
+        };
+
+        var config = {
+          type: chartDef.type || 'line',
+          data: { labels: chartDef.labels, datasets: datasets },
+          options: options
+        };
+
+        var ctx = canvas.getContext('2d');
+        new window.Chart(ctx, config);
+
+        if (chartDef.width) {
+          var container = canvas.closest('.chart-container');
+          if (container) {
+            container.style.width = chartDef.width;
+          }
+        }
+      } catch (err) {
+        console.warn('Chart render failed', err);
+      }
+    });
+  });
+</script>
 </head>
 </head>
   <body class="updates"> <!-- preloader start -->
@@ -315,8 +400,8 @@
         <div class="col-lg-8 mx-auto">
           <article class="update-single">
             <div class="text-center mb-5">
-              <h1 class="section-title"></h1>
-              <p class="text-muted">January 1, 0001</p>
+              <h1 class="section-title">Overview of the Delta-P (Pressure Drop)</h1>
+              <p class="text-muted">November 6, 2025</p>
             </div>
             
             <div class="update-content">
@@ -339,7 +424,28 @@
                   margin-bottom: 1.5rem;
                 }
               </style>
-              
+              <p><img src="/images/updates/pressure.png" alt="Pressure"></p>
+<p>Delta-P, pressure drop, is perhaps the most critical, important, and complex part of the entire rocket engine. In Sutton &amp; Biblarz, Delta-P is everywhere: across the injector, through the feed system, inside the chamber as acceleration loss, and as real-nozzle penalties. For some pressure drops, we want them to be as large as possible; for others, we want them to be as small as possible. Therefore, they did indeed create some kind of conflict.</p>
+<h2 id="from-the-textbooks">From the textbooks</h2>
+<p>Injector pressure drop (Ch. 8.1) is the most explicit discussion. Flow through injector orifices is set by Delta-P:</p>
+<p>$$\dot{m} = C_d A \sqrt{2 \rho \Delta p}$$</p>
+<p>Mixture ratio depends on the relative oxidizer and fuel drops:</p>
+<p>$$r \propto \sqrt{\frac{\Delta p_o}{\Delta p_f}}$$</p>
+<p>Sutton notes that a sufficiently large injector Delta-P (often 15-30% of chamber pressure) improves atomization, mixing, and stability. It also fixes the injector orifice size and therefore manufacturability. However, this value may vary in some cases. Higher pressure drop provides greater redundancy for combustion instability, but it also places higher demands on upstream pressure.</p>
+<p>The 15-30% range is not a fixed rule. These empirical values, calculated from an engineering perspective, are ultimately adjusted after testing because Delta-P depends on the actual hardware, including but not limited to line geometry, fittings, and even surface roughness (e.g., threaded pipes cause more losses than smooth pipes).</p>
+<p>Feed system pressure drop (Ch. 6.3, 6.9) accumulates in lines, valves, filters, and cooling jackets. The system pressure balance is therefore:</p>
+<p>$$p_{up} = p_c + \sum \Delta p_{lines} + \Delta p_{valves} + \Delta p_{cooling} + \Delta p_{injector}$$</p>
+<p>In practical design, since this discussion mainly focuses on engines that mix liquid ethanol and gaseous oxygen, theoretically the oxygen pressure drop should be slightly higher than that of ethanol.</p>
+<p>There are two reasons for this. First, gaseous oxygen is more compressible and more sensitive to pressure fluctuations, so a higher injector Delta-P helps damp coupling with chamber oscillations. Second, maintaining a stable oxidizer jet momentum improves mixing quality when the fuel side is liquid. This does not mean the difference should be large, but it should be intentional.</p>
+<p>In our case, we use a simple algorithm: set the oxidizer injector Delta-P first (as the stability anchor), then solve the fuel-side Delta-P to hit the target mixture ratio via</p>
+<p>$$r \propto \sqrt{\frac{\Delta p_o}{\Delta p_f}}$$</p>
+<p>In practice, this does not require a large split. A difference of roughly 0.1 MPa between oxidizer and fuel Delta-P is usually sufficient to achieve the desired ratio while keeping the oxidizer side more stable.</p>
+<hr>
+<p><strong>References:</strong></p>
+<ul>
+<li>Sutton, G.P., &amp; Biblarz, O. (2017). <em>Rocket Propulsion Elements</em> (8th ed.). Wiley. (Ch. 3, 6, 8, 10)</li>
+</ul>
+
             </div>
             
             <div class="text-center mt-5">
