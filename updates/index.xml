@@ -2,129 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Updates on Kelvin Aerospace Lab</title>
-    <link>http://localhost:7490/updates/</link>
+    <link>http://localhost:1313/updates/</link>
     <description>Recent content in Updates on Kelvin Aerospace Lab</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:7490/updates/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/updates/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Transient Nozzle Simulation (Fluent)</title>
-      <link>http://localhost:7490/updates/117-simulation/</link>
+      <link>http://localhost:1313/updates/117-simulation/</link>
       <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/117-simulation/</guid>
+      <guid>http://localhost:1313/updates/117-simulation/</guid>
       <description>&lt;p&gt;After establishing the thermal design with regenerative and film cooling, the next step is to validate the nozzle flow behavior under realistic operating conditions by transient CFD simulation.&lt;/p&gt;&#xA;&lt;p&gt;During ignition, the nozzle experiences rapid pressure and temperature changes. Shock waves form and propagate, and the flow takes finite time to establish steady supersonic expansion. These transients determine whether the nozzle will experience flow separation or overexpansion during start-up. Our initial nozzle calculations were theoretical values, and we were unsure whether the actual nozzle profile would function correctly.&lt;/p&gt;</description>
     </item>
     <item>
       <title>V1.1 Size Calculation (200 N)</title>
-      <link>http://localhost:7490/updates/116-size2/</link>
+      <link>http://localhost:1313/updates/116-size2/</link>
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/116-size2/</guid>
+      <guid>http://localhost:1313/updates/116-size2/</guid>
       <description>&lt;p&gt;After completing the V1.0 design with 150 N thrust, thermal analysis revealed a problem which the engine was too small for effective regenerative cooling. This entry documents the transition to V1.1. The previous design established basic sizing from CEA results. However, when we put these data into RPA, we find that the throat diameter is only 8 mm; to achieve acceptable wall temperatures (&amp;lt;900 K), channel width dropped below 0.5 mm and make them became unmachineable. We couldn&amp;rsquo;t even use liquid film cooling because the required orifice was simply too small.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Regenerative Cooling Optimization #2</title>
-      <link>http://localhost:7490/updates/115-cooling2/</link>
+      <link>http://localhost:1313/updates/115-cooling2/</link>
       <pubDate>Wed, 04 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/115-cooling2/</guid>
+      <guid>http://localhost:1313/updates/115-cooling2/</guid>
       <description>&lt;p&gt;The previous regenerative cooling optimization reached a critical limitation were even with optimized channel geometry, throat wall temperatures remained around 950 K. The fundamental issue is heat flux density at the throat is too concentrated for convective cooling alone to handle without either:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Extremely narrow channels (unmachineable), or&lt;/li&gt;&#xA;&lt;li&gt;Unacceptably high wall temperatures.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This entry documents the solution: &lt;strong&gt;film cooling&lt;/strong&gt;. The dataset is using pure ethanol as fuel without adding water.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Injector Demo</title>
-      <link>http://localhost:7490/updates/114-injector/</link>
+      <link>http://localhost:1313/updates/114-injector/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/114-injector/</guid>
+      <guid>http://localhost:1313/updates/114-injector/</guid>
       <description>&lt;p&gt;The injector is arguably the most critical component of a liquid rocket engine. It must meter propellant flow, atomize liquids into fine droplets, and ensure uniform mixing across the combustion chamber cross-section.&lt;/p&gt;&#xA;&lt;p&gt;For this project, we explored a pintle injector design. Pintle injectors use a central post (the pintle) surrounded by an annular gap through which propellants are injected. The central stream impinges on the outer annular flow, creating a radial spray pattern that distributes propellants across the chamber.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contraction Ratio Study</title>
-      <link>http://localhost:7490/updates/113-contraction-ratio/</link>
+      <link>http://localhost:1313/updates/113-contraction-ratio/</link>
       <pubDate>Wed, 14 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/113-contraction-ratio/</guid>
+      <guid>http://localhost:1313/updates/113-contraction-ratio/</guid>
       <description>&lt;p&gt;While L* defines the characteristic residence time, the contraction ratio $A_c/A_t$ (chamber area to throat area) fundamentally shapes the combustion chamber&amp;rsquo;s physical dimensions. This dimensionless parameter determines the diameter of the combustion chamber relative to the throat, and in some ways may be more important than L*.&lt;/p&gt;&#xA;&lt;p&gt;Chamber length is determined by:&lt;/p&gt;&#xA;&lt;p&gt;$$L_c = \frac{L^*}{A_c/A_t}$$&lt;/p&gt;&#xA;&lt;p&gt;Therefore, for a fixed L* (which we&amp;rsquo;ve established should be around 1.0-1.2m for our small engine), the contraction ratio directly controls chamber length.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Combustion Chamber L* Optimization</title>
-      <link>http://localhost:7490/updates/112-lstar/</link>
+      <link>http://localhost:1313/updates/112-lstar/</link>
       <pubDate>Wed, 07 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/112-lstar/</guid>
-      <description>&lt;h2 id=&#34;characteristic-length-l-analysis&#34;&gt;Characteristic Length (L*) Analysis&lt;/h2&gt;&#xA;&lt;p&gt;A critical parameter in combustion chamber design is the characteristic length L*, which directly affects combustion efficiency and chamber geometry. L* represents the ratio of combustion chamber volume to throat area and serves as an empirical indicator of propellant residence time.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:7490/images/updates/LSTAR.png&#34; alt=&#34;L* Comparison Analysis&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;We evaluated L* values ranging from 0.5m to 1.5m to understand their impact on chamber design. Some materials indicate that a sufficiently long L* is needed to achieve complete combustion, while others suggest a much shorter one. Since the chamber length depends on the calculated L*, an excessively long L* could make the engine resemble noodles, while an excessively short L* would allow insufficiently atomized gas to directly reach the convergence zone.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/updates/112-lstar/</guid>
+      <description>&lt;h2 id=&#34;characteristic-length-l-analysis&#34;&gt;Characteristic Length (L*) Analysis&lt;/h2&gt;&#xA;&lt;p&gt;A critical parameter in combustion chamber design is the characteristic length L*, which directly affects combustion efficiency and chamber geometry. L* represents the ratio of combustion chamber volume to throat area and serves as an empirical indicator of propellant residence time.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/updates/LSTAR.png&#34; alt=&#34;L* Comparison Analysis&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;We evaluated L* values ranging from 0.5m to 1.5m to understand their impact on chamber design. Some materials indicate that a sufficiently long L* is needed to achieve complete combustion, while others suggest a much shorter one. Since the chamber length depends on the calculated L*, an excessively long L* could make the engine resemble noodles, while an excessively short L* would allow insufficiently atomized gas to directly reach the convergence zone.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Regenerative Cooling Optimization #1</title>
-      <link>http://localhost:7490/updates/111-cooling1/</link>
+      <link>http://localhost:1313/updates/111-cooling1/</link>
       <pubDate>Sun, 28 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/111-cooling1/</guid>
-      <description>&lt;p&gt;This entry documents the regenerative cooling optimization process using RPA (Rocket Propulsion Analysis). The goal was to design coolant channels that keep the chamber and throat walls within acceptable temperature limits while maintaining reasonable pressure drop and manufacturability.&lt;/p&gt;&#xA;&lt;h2 id=&#34;initial-baseline-case-c0&#34;&gt;Initial Baseline: Case C0&lt;/h2&gt;&#xA;&lt;p&gt;The first attempt used a simple 1 mm × 1 mm channel geometry to establish a baseline.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:7490/images/updates/cooling/C0.png&#34; alt=&#34;C0 Result&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Maximum wall temperature approached &lt;strong&gt;1600 K&lt;/strong&gt;, and the coolant-side wall reached &lt;strong&gt;1000 K&lt;/strong&gt;. This is far too high for structural materials—neither aluminum alloys nor stainless steel can maintain strength at these temperatures.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/updates/111-cooling1/</guid>
+      <description>&lt;p&gt;This entry documents the regenerative cooling optimization process using RPA (Rocket Propulsion Analysis). The goal was to design coolant channels that keep the chamber and throat walls within acceptable temperature limits while maintaining reasonable pressure drop and manufacturability.&lt;/p&gt;&#xA;&lt;h2 id=&#34;initial-baseline-case-c0&#34;&gt;Initial Baseline: Case C0&lt;/h2&gt;&#xA;&lt;p&gt;The first attempt used a simple 1 mm × 1 mm channel geometry to establish a baseline.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/updates/cooling/C0.png&#34; alt=&#34;C0 Result&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Maximum wall temperature approached &lt;strong&gt;1600 K&lt;/strong&gt;, and the coolant-side wall reached &lt;strong&gt;1000 K&lt;/strong&gt;. This is far too high for structural materials—neither aluminum alloys nor stainless steel can maintain strength at these temperatures.&lt;/p&gt;</description>
     </item>
     <item>
       <title>V1.0 Size Calculation (150 N)</title>
-      <link>http://localhost:7490/updates/110-size1/</link>
+      <link>http://localhost:1313/updates/110-size1/</link>
       <pubDate>Sat, 20 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/110-size1/</guid>
+      <guid>http://localhost:1313/updates/110-size1/</guid>
       <description>&lt;p&gt;This entry records the basic size calculation for a 150 N thrust, 10 bar chamber pressure, GOX/ethanol engine. This is a very small size, and we are still evaluating its manufacturing feasibility.&lt;/p&gt;&#xA;&lt;h2 id=&#34;assumptions&#34;&gt;Assumptions&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Thrust $F=150 N$&lt;/li&gt;&#xA;&lt;li&gt;Chamber pressure $p_c=10bar / 1.0 MPa / 145 psia$&lt;/li&gt;&#xA;&lt;li&gt;Propellants: GOX/ethanol&lt;/li&gt;&#xA;&lt;li&gt;Performance: use CEA results as thermo-chem input&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;report-links&#34;&gt;Report Links&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CEA report and structural report are collected &lt;a href=&#34;http://docs.kelvinaero.org/Projects/v1.1%20Standard%20Kit%20Prototype/&#34;&gt;here&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;version-update&#34;&gt;Version Update&lt;/h2&gt;&#xA;&lt;p&gt;The first version has been replaced with the second version by January 30, 2026.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Cooling: Concept and Regenerative Approach</title>
-      <link>http://localhost:7490/updates/109-cooling0/</link>
+      <link>http://localhost:1313/updates/109-cooling0/</link>
       <pubDate>Tue, 09 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/109-cooling0/</guid>
+      <guid>http://localhost:1313/updates/109-cooling0/</guid>
       <description>&lt;p&gt;Combustion temperatures in rocket chambers exceed 3000 K, while aluminum melts at 930 K, stainless steel loses strength above 1000 K, and copper alloys fail around 1300–1500 K. Without cooling, the chamber throat would melt within seconds.&lt;/p&gt;&#xA;&lt;p&gt;Even refractory metals like tungsten (melting point 3700 K) soften and oxidize under sustained exposure. Therefore we can conclude active cooling is mandatory for any practical engine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;three-cooling-approaches&#34;&gt;Three Cooling Approaches&lt;/h2&gt;&#xA;&lt;p&gt;In his book &lt;em&gt;Rocket Propulsion Elements&lt;/em&gt;, Sutton introduces several main methods.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Supersonic Misconception</title>
-      <link>http://localhost:7490/updates/108-injection/</link>
+      <link>http://localhost:1313/updates/108-injection/</link>
       <pubDate>Sun, 23 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/108-injection/</guid>
+      <guid>http://localhost:1313/updates/108-injection/</guid>
       <description>&lt;p&gt;When studying injector design, an interesting question arises: why are most injectors designed for subsonic flow rather than supersonic? At first glance, supersonic gas injection seems advantageous—it could create &lt;strong&gt;choked flow&lt;/strong&gt;, effectively acting as a one-way valve. This might allow us to reduce injector pressure drop while maintaining the same stability margin, thereby lowering upstream pressure requirements.&lt;/p&gt;&#xA;&lt;p&gt;The hypothetical reasoning goes:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;If the injector orifice is designed to choke (reach Mach 1 at the throat), flow becomes independent of downstream pressure fluctuations.&lt;/li&gt;&#xA;&lt;li&gt;This choked condition acts as an acoustic barrier, isolating combustion chamber oscillations from the feed system.&lt;/li&gt;&#xA;&lt;li&gt;Therefore, we could achieve the same combustion stability with &lt;strong&gt;lower injector ΔP&lt;/strong&gt;, reducing upstream pressure demands.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;In theory, this would be a win-win: better stability at lower cost.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Overview of the Delta-P (Pressure Drop)</title>
-      <link>http://localhost:7490/updates/107-deltap/</link>
+      <link>http://localhost:1313/updates/107-deltap/</link>
       <pubDate>Thu, 06 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/107-deltap/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:7490/images/updates/pressure.png&#34; alt=&#34;Pressure&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Delta-P, pressure drop, is perhaps the most critical, important, and complex part of the entire rocket engine. In Sutton &amp;amp; Biblarz, Delta-P is everywhere: across the injector, through the feed system, inside the chamber as acceleration loss, and as real-nozzle penalties. For some pressure drops, we want them to be as large as possible; for others, we want them to be as small as possible. Therefore, they did indeed create some kind of conflict.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/updates/107-deltap/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/updates/pressure.png&#34; alt=&#34;Pressure&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Delta-P, pressure drop, is perhaps the most critical, important, and complex part of the entire rocket engine. In Sutton &amp;amp; Biblarz, Delta-P is everywhere: across the injector, through the feed system, inside the chamber as acceleration loss, and as real-nozzle penalties. For some pressure drops, we want them to be as large as possible; for others, we want them to be as small as possible. Therefore, they did indeed create some kind of conflict.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Chemical Analysis</title>
-      <link>http://localhost:7490/updates/106-chemical/</link>
+      <link>http://localhost:1313/updates/106-chemical/</link>
       <pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/106-chemical/</guid>
+      <guid>http://localhost:1313/updates/106-chemical/</guid>
       <description>&lt;p&gt;This update summarizes how we choose mixture ratio, thrust, and chamber pressure for a small GOX/ethanol engine.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mixture-ratio&#34;&gt;Mixture Ratio&lt;/h2&gt;&#xA;&lt;p&gt;The mixture ratio is defined as&lt;/p&gt;&#xA;&lt;p&gt;$$r = \frac{\dot{m}_o}{\dot{m}_f}$$&lt;/p&gt;&#xA;&lt;p&gt;In &lt;em&gt;Rocket Propulsion Elements&lt;/em&gt; (8th ed., Ch. 5), the thermodynamic property tables underpin why mixture ratio matters: lower molecular weight products generally raise $I_s$ and $c^*$. This helps explain why the optimal mixture ratio is often fuel-rich rather than stoichiometric. Sutton &amp;amp; Biblarz show this explicitly for LOX/LH2, where the optimal ratio is around 4.5-6.0 rather than the stoichiometric 8.0, because fuel-rich exhaust has lower molecular weight and therefore higher $I_s$.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Website Updates #2</title>
-      <link>http://localhost:7490/updates/105-website/</link>
+      <link>http://localhost:1313/updates/105-website/</link>
       <pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/105-website/</guid>
+      <guid>http://localhost:1313/updates/105-website/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;Major improvements to the Updates page.&lt;/li&gt;&#xA;&lt;li&gt;Improved the Home page title bar.&lt;/li&gt;&#xA;&lt;li&gt;Optimized font and layout on the Meetings page.&lt;/li&gt;&#xA;&lt;li&gt;Added support for Zapier bots.&lt;/li&gt;&#xA;&lt;li&gt;Improved questionnaire.&lt;/li&gt;&#xA;&lt;li&gt;Updated the homepage route map.&lt;/li&gt;&#xA;&lt;li&gt;Improved About Us description.&lt;/li&gt;&#xA;&lt;li&gt;Standardized and improved the LOGO usage.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Design Updates #1</title>
-      <link>http://localhost:7490/updates/104-design/</link>
+      <link>http://localhost:1313/updates/104-design/</link>
       <pubDate>Sat, 11 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/104-design/</guid>
-      <description>&lt;h2 id=&#34;engine-design&#34;&gt;Engine Design&lt;/h2&gt;&#xA;&lt;p&gt;After confirming the use of gaseous oxygen ethanol, regenerative cooling and pintle injectors, we decided to start the concept design. This step helps to visually demonstrate the general shape and technology.&lt;/p&gt;&#xA;&lt;p&gt;We used Fusion 360 to build the first concept model with a regenerative cooling loop to validate how regenerative cooling could be implemented.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:7490/images/updates/104-draft.png&#34; alt=&#34;Engine Concept Design&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This model illustrates the basic operation of the regenerative cooling circuit. Low-temperature ethanol enters the annular flow divider at the end of the engine through a side pipe. It then flows through the regenerative cooling circuit inside the engine sidewall and returns to the top of the engine, entering the annular gap. Gaseous oxygen enters the engine directly through a pintle injector, where it collides with the ethanol at the opening, mixing and atomizing.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/updates/104-design/</guid>
+      <description>&lt;h2 id=&#34;engine-design&#34;&gt;Engine Design&lt;/h2&gt;&#xA;&lt;p&gt;After confirming the use of gaseous oxygen ethanol, regenerative cooling and pintle injectors, we decided to start the concept design. This step helps to visually demonstrate the general shape and technology.&lt;/p&gt;&#xA;&lt;p&gt;We used Fusion 360 to build the first concept model with a regenerative cooling loop to validate how regenerative cooling could be implemented.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/updates/104-draft.png&#34; alt=&#34;Engine Concept Design&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This model illustrates the basic operation of the regenerative cooling circuit. Low-temperature ethanol enters the annular flow divider at the end of the engine through a side pipe. It then flows through the regenerative cooling circuit inside the engine sidewall and returns to the top of the engine, entering the annular gap. Gaseous oxygen enters the engine directly through a pintle injector, where it collides with the ethanol at the opening, mixing and atomizing.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Electronic Updates #1</title>
-      <link>http://localhost:7490/updates/103-electronics/</link>
+      <link>http://localhost:1313/updates/103-electronics/</link>
       <pubDate>Wed, 08 Oct 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/103-electronics/</guid>
+      <guid>http://localhost:1313/updates/103-electronics/</guid>
       <description>&lt;h2 id=&#34;software&#34;&gt;Software&lt;/h2&gt;&#xA;&lt;p&gt;We need to collect data from testing to improve the engine. This data will include thrust, mass flow, temperature, pressure, and vibration. To ensure safety, all this data will be collected by sensors and transmitted back to a computer, where it can be plotted in real time and exported after completion. There are several options for achieving this goal.&lt;/p&gt;&#xA;&lt;p&gt;The electronics team confirmed that the Arduino serial plotter can have multiple data points, which means we don&amp;rsquo;t need an additional ESP32 for data logging, saving costs.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Website Updates #1</title>
-      <link>http://localhost:7490/updates/102-website/</link>
+      <link>http://localhost:1313/updates/102-website/</link>
       <pubDate>Sat, 20 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:7490/updates/102-website/</guid>
+      <guid>http://localhost:1313/updates/102-website/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Private domain are now accessible: &lt;a href=&#34;https://www.kelvinaero.org&#34;&gt;www.kelvinaero.org&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;A new Meetings page has been added to the website. Here you can find our current agenda and progress.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The documentation platform is now open and accessible. Here you can find all our research articles and resources.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The process of regular meetings has been changed and improved.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;General Presentation. All teams provide brief updates.&lt;/li&gt;&#xA;&lt;li&gt;Section Reports. Electronics, CAD &amp;amp; CFD, documentation, etc.&lt;/li&gt;&#xA;&lt;li&gt;Discussions and Questions. Shared feedback and cross-section coordination.&lt;/li&gt;&#xA;&lt;li&gt;Breakout Discussions – Smaller, technical groups handle design-specific details.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Completed the record-keeping of previous meetings.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Welcome to Our New Updates Section</title>
-      <link>http://localhost:7490/updates/101-welcome/</link>
+      <link>http://localhost:1313/updates/101-welcome/</link>
       <pubDate>Fri, 12 Sep 2025 13:35:55 -0500</pubDate>
-      <guid>http://localhost:7490/updates/101-welcome/</guid>
+      <guid>http://localhost:1313/updates/101-welcome/</guid>
       <description>We&amp;rsquo;re excited to introduce our new Updates section! This is where we&amp;rsquo;ll be sharing the latest news, announcements, and developments from our team.</description>
     </item>
   </channel>
